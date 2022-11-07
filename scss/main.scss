@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+@import "./secciones/restart";
+@import "./secciones/header";
+@import "./secciones/mainIndex";
+@import "./secciones/mainNosotros";
+@import "./secciones/mainContacto";
+@import "./secciones/mainTienda";
+@import "./secciones/footer";

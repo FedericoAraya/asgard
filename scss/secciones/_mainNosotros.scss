@@ -1,0 +1,27 @@
+.mainNosotros {
+  background-image: linear-gradient(to top, #d8d8d8, #ffffff);
+
+  .imagenNosotrosMain {
+    width: 100%;
+    max-height: 40vh;
+    object-fit: cover;
+    object-position: 0 60%;
+  }
+  .nosotros{
+    margin-top: 20px;
+    h2 {
+      text-align: center;
+    }
+    img {
+      width: 50%;
+      float: left;
+      padding: 5px 10px 10px 10px;
+    }
+    .nosotrosText {
+      text-align: justify;
+      font-size: 12px;
+      padding: 10px;
+      margin: 0;
+    }
+  }
+}

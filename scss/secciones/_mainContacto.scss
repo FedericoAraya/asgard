@@ -1,0 +1,42 @@
+.mainContacto{
+  background-image: linear-gradient(to top, #d8d8d8, #ffffff);
+  min-height: 100vh;
+ .imagenContactoMain {
+    width: 100%;
+    max-height: 40vh;
+    object-fit: cover;
+    object-position: 0 60%;
+  }
+  .redes {
+    img {
+      width: 25px;
+      margin: 30px;
+    }
+  }
+  .copirigth {
+    p {
+      margin: auto 0 !important;
+    }
+  }
+.formConsulta {
+    grid-area: formulario;
+    padding: 20px;
+    h3 {
+        text-align: center;
+    }
+    .inpConsulta {
+        display: grid;
+        grid-template-columns: max-content;
+        justify-content: center;
+        gap: 10px;
+        padding: 5px;
+        input {
+          padding: 2px;
+          &:hover {
+            border: solid 2px black;
+            border-radius: 3px;
+          }
+        }
+    }
+  }
+}

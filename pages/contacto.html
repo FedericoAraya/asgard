@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../images/logo-asgard.png"
+      type="image/x-icon"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Asgard Equipamiento</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar d-md-none bg-light fixed-top">
+        <div class="container-fluid">
+          <button
+            class="menu"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <img src="../images/menu-hamburguesa.png" alt="Menú" />
+          </button>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <img src="../images/logo-asgard.png" alt="Logo Asgard" />
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="../index.html"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="../pages/tienda.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Productos
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="../pages/tienda.html"
+                        >Todos los productos</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Bajo asiento</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Sobre cuadro</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Framebag</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./envios.html">Envios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pagos.html">Formas de Pago</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <form class="d-flex" role="search">
+                    <input
+                      class="form-control me-2 form-buscar"
+                      type="search"
+                      placeholder="Buscar"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-buscar" type="submit">Buscar</button>
+                  </form>
+                </li>
+                <li class="nav-item">
+                  <button class="btn btn-primary" type="submit">
+                    Iniciar Sesión
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <button class="btn btn-primary" type="submit">
+                    Registrarse
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a class="navbar-brand" href="../index.html">
+            <img src="../images/logo-asgard.png" alt="Logo Asgard" />
+          </a>
+          <!-- offcanvas carrito -->
+          <button
+            class="btn btn-ligth carrito"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling"
+          >
+            <img src="../images/carrito.png" alt="Carrito" />
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            data-bs-scroll="true"
+            data-bs-backdrop="false"
+            tabindex="-1"
+            id="offcanvasScrolling"
+            aria-labelledby="offcanvasScrollingLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+                Offcanvas with body scrolling
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <p>
+                Try scrolling the rest of the page to see this option in action.
+              </p>
+            </div>
+          </div>
+          <!-- offcanvas carrito -->
+        </div>
+      </nav>
+      <nav class="navbar d-none d-md-block navbar-expand-md bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"
+            ><img src="../images/logo-asgard.png" alt="Logo Asgard"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="../pages/tienda.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Productos
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./tienda.html"
+                      >Todos los productos</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Bajo asiento</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Sobre cuadro</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Frame bag</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./envios.html">Envios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pagos.html">Formas de Pago</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="btn btn-ligth carrito"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasScrolling"
+                  aria-controls="offcanvasScrolling"
+                >
+                  <img src="../images/carrito.png" alt="Carrito" />
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="mainContacto">
+      <img class="imagenContactoMain" src="../images/fondo lago.jpg" alt="Paisaje lago con bici">
+      <div class="redes">
+        <a href=""><img src="../images/whatsapp.png" alt="Logo WhatsApp" /></a>
+        <a href="https://www.instagram.com/asgardequipamiento/"><img src="../images/instagram.png" alt="Logo instagram"/></a>
+        <a href="https://www.facebook.com/asgardequipamiento"><img src="" alt="Facebook"/></a>
+      </div>
+      <div class="formConsulta">
+        <h3>Consulta:</h3>
+        <form
+          class="inpConsulta"
+          action="https://formspree.io/f/meqdevkd"
+          target="_blank"
+          method="POST"
+        >
+          <input
+            type="text"
+            name="Nombre"
+            placeholder="Nombre y Apellido"
+            required
+          />
+          <input type="tel" name="Telefono" placeholder="Telefono" required />
+          <input type="email" name="email" placeholder="E-mail" required />
+          <textarea name="message" required> Hola, me gustaria saber </textarea>
+          <div>Desea recibir información?</div>
+          <input type="checkbox" name="recibirInfo" id="1" />
+          <input class="enviarTurno" type="submit" value="Enviar" />
+          <input class="enviarTurno" type="reset" value="Limpiar formulario" />
+        </form>
+      </div>
+    </main>
+    <footer class="footer d-flex">
+      <div class="redes">
+        <a href=""><img src="../images/whatsapp.png" alt="Logo WhatsApp" /></a>
+        <a href=""><img src="../images/instagram.png" alt="Logo instagram"/></a>
+      </div>
+      <div class="copirigth">
+        <p>By.Asgard ©</p>
+      </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
