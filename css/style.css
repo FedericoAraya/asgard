@@ -134,6 +134,7 @@ body {
     object-fit: cover;
     object-position: 0 60%; }
   .mainTienda h2 {
+    margin: 5px;
     text-align: center; }
 
 .footer {
