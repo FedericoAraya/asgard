@@ -245,60 +245,48 @@
         </div>
       </nav>
     </header>
-    <main class="mainTienda">
-      <img class="imagenTiendaMain" src="../images/fondo sierras.jpg" alt="">
-      <h2>Tienda</h2>
-      <div id="productos">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-5">
-              <img src="../images/bajo-asiento-14l.webp" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-7">
-              <div class="card-body">
-                <h5 class="card-title">BAJO ASIENTO</h5>
-                <p class="card-text">Mas volumen de carga, viajes mas largos.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
+    <main class="mainLogin d-flex flex-column flex-md-row">
+
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Login</button>
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Registrarse</button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+          <div class="form ">
+            <h3>Login:</h3>
+            <form action="submit"  class="d-flex flex-column">
+              <input type="text" name="nombreUsuario" id="nombreUsuario" required placeholder="Nombre de usuario">
+              <input type="password" name="pass" id="passUsuario" required placeholder="Contraseña">
+              <button class="btn btn-primary" type="submit">Login</button>
+            </form>
           </div>
         </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-5">
-              <img src="../images/sobre-cuadro.jpeg" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-7">
-              <div class="card-body">
-                <h5 class="card-title">SOBRE CUADRO</h5>
-                <p class="card-text">Ideal para reemplazar a tus bolsillos.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+          <div class="form">
+            <h3>Registrarse:</h3>
+            <form action="submit"class="d-flex flex-column">
+              <input type="text" name="nombreUsuario" id="nombreUsuario" required placeholder="Nombre de usuario">
+              <input type="email" name="email" id="emailUsuario" required placeholder="E-mail">
+              <input type="password" name="pass" id="passUsuario" required placeholder="Contraseña">
+              <input type="password" name="confirmPass" id="confirmPass" required placeholder="Repetir contraseña">
+              <button class="btn btn-primary"type="submit">Registrarse</button>
+            </form>
           </div>
         </div>
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-5">
-              <img src="../images/frames.jpeg" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-7">
-              <div class="card-body">
-                <h5 class="card-title">FRAME BAG</h5>
-                <p class="card-text">El complemento ideal si lo que buscas es equilibrio en tu bici.</p>
-                <p class="card-text"><small class="text-muted">Consultanos por tu Frame Bag a medida.</small></p>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
+      </div>
+
+
+
+     
+      
     </main>
     <footer class="footer d-flex">
       <div class="redes">
         <a href=""><img src="../images/whatsapp.png" alt="Logo WhatsApp" /></a>
-        <a href=""
-          ><img src="../images/instagram.png" alt="Logo instagram"
-        /></a>
+        <a href=""><img src="../images/instagram.png" alt="Logo instagram"/></a>
       </div>
       <div class="copirigth">
         <p>By.Asgard ©</p>

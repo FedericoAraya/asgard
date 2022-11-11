@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="./images/logo-asgard.png"
+      href="./images/asgard vector.ai"
       type="image/x-icon"
     />
     <!-- CSS only -->
@@ -40,7 +40,9 @@
           >
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <img src="./images/logo-asgard.png" alt="Logo Asgard" />
+                <a href="./index.html">
+                  <img src="./images/logo-asgard.png" alt="Logo Asgard"
+                /></a>
               </h5>
               <button
                 type="button"
@@ -93,10 +95,17 @@
                   <a class="nav-link" href="./pages/envios.html">Envios</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./pages/pagos.html">Formas de Pago</a>
+                  <a class="nav-link" href="./pages/pagos.html"
+                    >Formas de Pago</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                </li>
+                <li id="linkAdmin" class="nav-item d-none">
+                  <a class="nav-link" href="./pages/administrador.html"
+                    >Admin</a
+                  >
                 </li>
                 <li class="nav-item">
                   <form class="d-flex" role="search">
@@ -110,14 +119,11 @@
                   </form>
                 </li>
                 <li class="nav-item">
-                  <button class="btn btn-primary" type="submit">
-                    Iniciar Sesión
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <button class="btn btn-primary" type="submit">
-                    Registrarse
-                  </button>
+                  <a href="./pages/login.html">
+                    <button class="btn btn-primary" type="submit">
+                      Login
+                    </button></a
+                  >
                 </li>
               </ul>
             </div>
@@ -145,7 +151,7 @@
           >
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
-                Offcanvas with body scrolling
+                Carrito
               </h5>
               <button
                 type="button"
@@ -154,10 +160,29 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="offcanvas-body">
-              <p>
-                Try scrolling the rest of the page to see this option in action.
-              </p>
+            <div id="carrito" class="offcanvas-body">
+              <div class="cardCarrito">
+                <div class="card mb-3" style="max-width: 540px">
+                  <div class="row g-0">
+                    <div class="col-5">
+                      <img
+                        src="./images/bajo-asiento.jpeg"
+                        class="img-fluid rounded-start"
+                        alt="bajo asiento 14l"
+                      />
+                    </div>
+                    <div class="col-7">
+                      <div class="card-body">
+                        <h5 class="card-title">Producto</h5>
+                        <p class="card-text">Precio</p>
+                        <p class="card-text">
+                          <small class="text-muted">Cantidad</small>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <!-- offcanvas carrito -->
@@ -204,7 +229,9 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="./pages/tienda.html">Todos los productos</a>
+                    <a class="dropdown-item" href="./pages/tienda.html"
+                      >Todos los productos</a
+                    >
                   </li>
                   <li><a class="dropdown-item" href="#">Bajo asiento</a></li>
                   <li>
@@ -227,6 +254,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="./pages/contacto.html">Contacto</a>
               </li>
+              <li id="linkAdmin" class="nav-item d-none">
+                <a class="nav-link" href="./pages/administrador.html">Admin</a>
+              </li>
               <li class="nav-item">
                 <button
                   class="btn btn-ligth carrito"
@@ -243,6 +273,7 @@
         </div>
       </nav>
     </header>
+
     <main class="mainIndex d-flex flex-column">
       <h1 class="d-none">BIENVENIDO A ASGARD EQUIPAMIENTO</h1>
       <div class="portada d-flex flex-column flex-dm-row">
@@ -267,8 +298,8 @@
         <video src="./images/hecho a mano.mp4" autoplay muted loop></video>
         <p class="hechoAManoText">
           Fabricados artesanalmente en Córdoba y enviados a todo el país. <br />
-          Apuntamos a confeccionar piezas de alta calidad, acompañando a nuestros clientes en sus aventuras y superandonos día a
-          día.
+          Apuntamos a confeccionar piezas de alta calidad, acompañando a
+          nuestros clientes en sus aventuras y superandonos día a día.
         </p>
       </div>
     </main>
