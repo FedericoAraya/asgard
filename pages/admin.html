@@ -20,9 +20,160 @@
     <title>Asgard Equipamiento</title>
   </head>
 <body>
-    <header>
-    <img src="../images/logo-asgard.png" alt="Logo Asgard">
-</header>
+  <header class="header">
+    <div class="nav-responsive">
+      <!-- offcanvas nav mobile -->
+      <nav class="navbar d-md-none nav-mobile">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <img src="../images/menu-hamburguesa.png" alt="menu hamburguesa" />
+          </button>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <img src="../images/logo-asgard.png" alt="Logo Asgard" />
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="../index.html"
+                    >Inicio</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./tienda.html">Tienda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./nosotros.html"
+                    >Nosotros</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./pagosYEnvios.html"
+                    >Pagos y Envios</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contacto.html"
+                    >Contacto</a
+                  >
+                </li>
+                <li class="nav-item d-none">
+                  <a class="nav-link" href="./admin.html">Admin</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link d-flex flex-row login" href="./login.html"
+                    ><img src="../images/loginIcon.png" alt="Icono Login"><p class="p-2">LOGIN</p></a>
+                  
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- offcanvas nav mobile -->
+      <!-- nav desk -->
+      <nav class="navbar nav-desck d-none d-md-block">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html"><img src="../images/logo-asgard.png" alt="Logo Asgard" /></a>
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+
+            <a class="nav-link" href="./tienda.html">Tienda</a>
+            <a class="nav-link" href="./nosotros.html">Nosotros</a>
+            <a class="nav-link" href="./pagosYEnvios.html">Pagos y Envios</a>
+            <a class="nav-link" href="./contacto.html">Contactos</a>
+            <a class="nav-link " href="/admin.html">Admin</a>
+            <a class="nav-link" href="./login.html"
+            ><button class="btn btn-ligth"><img src="../images/loginIcon.png" alt="Icono Login"></button></a
+          >
+          </div>
+        </div>
+      </nav>
+      <!-- nav desk -->
+    </div>
+    <!-- logo mobile -->
+    <a class="navbar-brand d-md-none" href="../index.html"
+      ><img src="../images/logo-asgard.png" alt="Logo Asgard"
+    /></a>
+    <!-- logo nav mobile -->
+    <!-- offcanvas carrito -->
+    <div id="carrito">
+      <button
+        class="btn btn-ligth carrito"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling"
+      >
+        <img src="../images/carrito.png" alt="Carrito" />
+      </button>
+      <div
+        class="offcanvas offcanvas-end collapse"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+        tabindex="-1"
+        id="offcanvasScrolling"
+        aria-labelledby="offcanvasScrollingLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+            Carrito
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="cardCarrito">
+            <div class="card mb-3" style="max-width: 540px">
+              <div class="row g-0">
+                <div class="col-5">
+                  <img
+                    src="../images/bajo-asiento.jpeg"
+                    class="img-fluid rounded-start"
+                    alt="bajo asiento 14l"
+                  />
+                </div>
+                <div class="col-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Producto</h5>
+                    <p class="card-text">Precio</p>
+                    <p class="card-text">
+                      <small class="text-muted">Cantidad</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- offcanvas carrito -->
+  </header>
 <main>
     <h5>En esta sección podrá realizar los cambios que desee en su tienda.</h5>
     <h5>Productos</h5>
