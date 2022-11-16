@@ -197,7 +197,7 @@
       <div>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <button
-            class="nav-link active"
+            class="nav-link active botonLog"
             id="nav-home-tab"
             data-bs-toggle="tab"
             data-bs-target="#nav-home"
@@ -209,7 +209,7 @@
             Login
           </button>
           <button
-            class="nav-link"
+            class="nav-link botonRegistrarse"
             id="nav-profile-tab"
             data-bs-toggle="tab"
             data-bs-target="#nav-profile"
@@ -249,8 +249,10 @@
                 placeholder="Contraseña"
               />
               <p class="contrasenaIncorrecta"></p>
-              <input type="submit" class="btn btn-primary" value="Login" />
+              <input type="submit" class="btn btn-primary botonLog" value="Login" />
+              
             </form>
+            <input type="submit" class="btn btn-primary deslog d-none" value="Desloguear" />
           </div>
         </div>
         <div
@@ -260,7 +262,7 @@
           aria-labelledby="nav-profile-tab"
           tabindex="0"
         >
-          <div class="form">
+          <div class="form formRegistrarse">
             <h3>Registrarse:</h3>
             <form action="submit" class="d-flex flex-column">
               <input
@@ -315,6 +317,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/data.js"></script>
-    <script src="../js/appLogin.js"></script>
+    <script src="../js/loginApp.js"></script>
   </body>
 </html>
