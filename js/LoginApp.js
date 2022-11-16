@@ -1,3 +1,17 @@
+if(usuarioLogueado != "deslog"){
+const formRegistrarse = document.querySelector('.formRegistrarse')
+const botonRegistrarse = document.querySelector('.botonRegistrarse') 
+const botonLog = document.querySelector('.botonLog')
+const deslog = document.querySelector('.deslog') 
+const formLogin = document.querySelector('#formLogin')
+formRegistrarse.classList = 'd-none'
+botonRegistrarse.classList = 'd-none'
+botonLog.classList = "btn btn-primary botonLog d-none"
+deslog.classList = "btn btn-primary deslog"
+formLogin.classList = 'd-none'
+}
+
+
 const formLogin = document.getElementById("formLogin");
 formLogin.addEventListener("submit", validarLogin);
 
@@ -47,11 +61,14 @@ function loguear(){
       adminVisibleD.classList = 'nav-link d-block adminVisibleD'
       adminVisibleM.classList = 'nav-item d-block adminVisibleM'
     }
-
+    const index = usuarios.findIndex(
+      (posicion) => posicion.nombreUsuario === usuarioIngresado )
+      localStorage.setItem('usuarioLogueado', index)
 }
-
-
-
-}    
-
-
+}  
+const logOut = document.querySelector(".deslog");
+logOut.addEventListener("click", funLogOut);
+function funLogOut(){
+  localStorage.removeItem("usuarioLogueado")
+    location.reload()
+}

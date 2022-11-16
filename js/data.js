@@ -1,3 +1,4 @@
+
 //DATA//
 const categorias = ["Bajo Asiento", "Sobre Cuadro", "Frame Bag"];
 
@@ -67,6 +68,39 @@ class ProductoCarrito {
   }
 }
 
-const carrito = [];
+
 
 //data//
+
+let usuarioLogueado = "deslog"
+let carrito 
+
+if (localStorage.getItem('carrito')) {
+  carrito = JSON.parse(localStorage.getItem('carrito'))
+} else {
+  carrito = []
+}
+if (localStorage.getItem('usuarioLogueado')) {
+  usuarioLogueado = JSON.parse(localStorage.getItem('usuarioLogueado'))
+} 
+
+if(usuarioLogueado != "deslog"){
+  const logoLogin = document.querySelectorAll('.logoLogin')
+  const saludo = document.querySelectorAll('.saludo')
+    saludo[0].innerHTML = `Hola, ${usuarios[usuarioLogueado].nombreUsuario}`    
+    saludo[1].innerHTML = `Hola, ${usuarios[usuarioLogueado].nombreUsuario}`  
+    logoLogin[0].style.backgroundColor = "#66c70c"
+    logoLogin[0].style.borderRadius = "40px"
+    logoLogin[1].style.backgroundColor = "#66c70c"
+    logoLogin[1].style.borderRadius = "40px"
+    if (usuarios[usuarioLogueado].categoria == "admin" ){
+      const adminVisibleM = document.querySelector('.adminVisibleM')
+      const adminVisibleD = document.querySelector('.adminVisibleD')
+      adminVisibleD.classList = 'nav-link d-block adminVisibleD'
+      adminVisibleM.classList = 'nav-item d-block adminVisibleM'
+    }
+    
+}
+
+
+
