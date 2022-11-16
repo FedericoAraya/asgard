@@ -102,6 +102,10 @@ body {
     .mainLogin #nav-tabContent .form form input {
       margin: 10px 5px;
       font-size: smaller; }
+    .mainLogin #nav-tabContent .form form p {
+      font-size: xx-small;
+      color: red;
+      padding-left: 10px; }
     .mainLogin #nav-tabContent .form form button {
       margin: 10px;
       background-color: #707070;

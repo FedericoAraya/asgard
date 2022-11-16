@@ -77,12 +77,12 @@
                       >Contacto</a
                     >
                   </li>
-                  <li class="nav-item d-none">
-                    <a class="nav-link" href="./pages/admin.html">Admin</a>
+                  <li class="nav-item d-none adminVisible" >
+                    <a class="nav-link " href="./pages/admin.html">Admin</a>
                   </li>
                   <li class="nav-item ">
                     <a class="nav-link d-flex flex-row login" href="./pages/login.html"
-                      ><img src="./images/loginIcon.png" alt="Icono Login"><p class="p-2">LOGIN</p></a>
+                      ><img id="logoLogin" src="./images/loginIcon.png" alt="Icono Login"><p class="p-2">LOGIN</p></a>
                     
                   </li>
                 </ul>
@@ -102,9 +102,9 @@
               <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
               <a class="nav-link" href="./pages/pagosYEnvios.html">Pagos y Envios</a>
               <a class="nav-link" href="./pages/contacto.html">Contactos</a>
-              <a class="nav-link " href="/pages/admin.html">Admin</a>
+              <a  class="nav-link d-none adminVisible" href="/pages/admin.html">Admin</a>
               <a class="nav-link" href="./pages/login.html"
-              ><button class="btn btn-ligth"><img src="./images/loginIcon.png" alt="Icono Login"></button></a
+              ><button class="btn btn-ligth"><img id="logoLogin" src="./images/loginIcon.png" alt="Icono Login"></button></a
             >
             </div>
           </div>
@@ -218,5 +218,6 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+   
   </body>
 </html>

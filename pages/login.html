@@ -32,7 +32,10 @@
               data-bs-target="#offcanvasNavbar"
               aria-controls="offcanvasNavbar"
             >
-              <img src="../images/menu-hamburguesa.png" alt="menu hamburguesa" />
+              <img
+                src="../images/menu-hamburguesa.png"
+                alt="menu hamburguesa"
+              />
             </button>
             <div
               class="offcanvas offcanvas-start"
@@ -48,7 +51,9 @@
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
                 ></button>
+                
               </div>
+              <h5 class="saludo m-3"></h5>
               <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li class="nav-item">
@@ -63,9 +68,7 @@
                     <a class="nav-link" href="./tienda.html">Tienda</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./nosotros.html"
-                      >Nosotros</a
-                    >
+                    <a class="nav-link" href="./nosotros.html">Nosotros</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="./pagosYEnvios.html"
@@ -73,18 +76,19 @@
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./contacto.html"
-                      >Contacto</a
-                    >
+                    <a class="nav-link" href="./contacto.html">Contacto</a>
                   </li>
-                  <li class="nav-item d-none">
+                  <li class="nav-item d-none adminVisibleM">
                     <a class="nav-link" href="./admin.html">Admin</a>
                   </li>
-                  <li class="nav-item ">
-                    <a class="nav-link d-flex flex-row login" href="./login.html"
-                      ><img src="../images/loginIcon.png" alt="Icono Login"><p class="p-2">LOGIN</p></a>
-                    
-                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link d-flex flex-row login"
+                      href="./login.html"
+                      ><img  class="logoLogin" src="../images/loginIcon.png" alt="Icono Login" />
+                      <p class="p-2">LOGIN</p></a
+                    >
+                                      </li>
                 </ul>
               </div>
             </div>
@@ -94,18 +98,31 @@
         <!-- nav desk -->
         <nav class="navbar nav-desck d-none d-md-block">
           <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html"><img src="../images/logo-asgard.png" alt="Logo Asgard" /></a>
+            <a class="navbar-brand" href="../index.html"
+              ><img src="../images/logo-asgard.png" alt="Logo Asgard"
+            /></a>
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../index.html"
+                >Inicio</a
+              >
               <a class="nav-link" href="./tienda.html">Tienda</a>
               <a class="nav-link" href="./nosotros.html">Nosotros</a>
               <a class="nav-link" href="./pagosYEnvios.html">Pagos y Envios</a>
               <a class="nav-link" href="./contacto.html">Contactos</a>
-              <a class="nav-link " href="/admin.html">Admin</a>
+              <a class="nav-link adminVisibleD d-none" href="/admin.html"
+                >Admin</a
+              >
               <a class="nav-link" href="./login.html"
-              ><button class="btn btn-ligth"><img src="../images/loginIcon.png" alt="Icono Login"></button></a
-            >
+                ><button class="btn btn-ligth">
+                  <img
+                    class="logoLogin"
+                    src="../images/loginIcon.png"
+                    alt="Icono Login"
+                  /></button
+              ></a>
             </div>
           </div>
         </nav>
@@ -136,6 +153,7 @@
           aria-labelledby="offcanvasScrollingLabel"
         >
           <div class="offcanvas-header">
+            
             <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
               Carrito
             </h5>
@@ -146,6 +164,7 @@
               aria-label="Close"
             ></button>
           </div>
+          <h6 class="saludo m-2" ></h6>
           <div class="offcanvas-body">
             <div class="cardCarrito">
               <div class="card mb-3" style="max-width: 540px">
@@ -175,47 +194,115 @@
       <!-- offcanvas carrito -->
     </header>
     <main class="mainLogin d-flex flex-column flex-md-row">
-
       <div>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-          <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Login</button>
-          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Registrarse</button>
+          <button
+            class="nav-link active"
+            id="nav-home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-home"
+            type="button"
+            role="tab"
+            aria-controls="nav-home"
+            aria-selected="true"
+          >
+            Login
+          </button>
+          <button
+            class="nav-link"
+            id="nav-profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-profile"
+            type="button"
+            role="tab"
+            aria-controls="nav-profile"
+            aria-selected="false"
+          >
+            Registrarse
+          </button>
         </div>
       </div>
       <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-          <div class="form ">
+        <div
+          class="tab-pane fade show active"
+          id="nav-home"
+          role="tabpanel"
+          aria-labelledby="nav-home-tab"
+          tabindex="0"
+        >
+          <div class="form">
             <h3>Login:</h3>
-            <form action="submit"  class="d-flex flex-column">
-              <input type="text" name="nombreUsuario" id="nombreUsuario" required placeholder="Nombre de usuario">
-              <input type="password" name="pass" id="passUsuario" required placeholder="Contraseña">
-              <button class="btn btn-primary" type="submit">Login</button>
+            <form id="formLogin" action="submit" class="d-flex flex-column">
+              <input
+                type="text"
+                name="nombreUsuario"
+                id="nombreUsuario"
+                required
+                placeholder="Nombre de usuario"
+              />
+              <p class="usuarioIncorrecto"></p>
+              <input
+                type="password"
+                name="pass"
+                id="passUsuario"
+                required
+                placeholder="Contraseña"
+              />
+              <p class="contrasenaIncorrecta"></p>
+              <input type="submit" class="btn btn-primary" value="Login" />
             </form>
           </div>
         </div>
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+        <div
+          class="tab-pane fade"
+          id="nav-profile"
+          role="tabpanel"
+          aria-labelledby="nav-profile-tab"
+          tabindex="0"
+        >
           <div class="form">
             <h3>Registrarse:</h3>
-            <form action="submit"class="d-flex flex-column">
-              <input type="text" name="nombreUsuario" id="nombreUsuario" required placeholder="Nombre de usuario">
-              <input type="email" name="email" id="emailUsuario" required placeholder="E-mail">
-              <input type="password" name="pass" id="passUsuario" required placeholder="Contraseña">
-              <input type="password" name="confirmPass" id="confirmPass" required placeholder="Repetir contraseña">
-              <button class="btn btn-primary"type="submit">Registrarse</button>
+            <form action="submit" class="d-flex flex-column">
+              <input
+                type="text"
+                name="nombreUsuario"
+                id="nombreUsuario"
+                required
+                placeholder="Nombre de usuario"
+              />
+              <input
+                type="email"
+                name="email"
+                id="emailUsuario"
+                required
+                placeholder="E-mail"
+              />
+              <input
+                type="password"
+                name="pass"
+                id="passUsuario"
+                required
+                placeholder="Contraseña"
+              />
+              <input
+                type="password"
+                name="confirmPass"
+                id="confirmPass"
+                required
+                placeholder="Repetir contraseña"
+              />
+              <button class="btn btn-primary" type="submit">Registrarse</button>
             </form>
           </div>
         </div>
       </div>
-
-
-
-     
-      
     </main>
     <footer class="footer d-flex">
       <div class="redes">
         <a href=""><img src="../images/whatsapp.png" alt="Logo WhatsApp" /></a>
-        <a href=""><img src="../images/instagram.png" alt="Logo instagram"/></a>
+        <a href=""
+          ><img src="../images/instagram.png" alt="Logo instagram"
+        /></a>
       </div>
       <div class="copirigth">
         <p>By.Asgard ©</p>
@@ -227,5 +314,7 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/appLogin.js"></script>
   </body>
 </html>
