@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="../images/asgard vector.ai"
+      href="../images/logo-asgard.png"
       type="image/x-icon"
     />
     <!-- CSS only -->
@@ -262,37 +262,39 @@
           aria-labelledby="nav-profile-tab"
           tabindex="0"
         >
-          <div class="form formRegistrarse">
+          <div class="form ">
             <h3>Registrarse:</h3>
-            <form action="submit" class="d-flex flex-column">
+            <form action="submit" class="d-flex flex-column " id="formRegistrarse">
               <input
                 type="text"
                 name="nombreUsuario"
-                id="nombreUsuario"
+                id="nombreUsuarioR"
                 required
                 placeholder="Nombre de usuario"
               />
+              <p class="usuarioExistente"></p>
               <input
                 type="email"
                 name="email"
-                id="emailUsuario"
+                id="emailUsuarioR"
                 required
                 placeholder="E-mail"
               />
               <input
                 type="password"
                 name="pass"
-                id="passUsuario"
+                id="passUsuarioR"
                 required
                 placeholder="Contraseña"
               />
               <input
                 type="password"
                 name="confirmPass"
-                id="confirmPass"
+                id="confirmPassR"
                 required
                 placeholder="Repetir contraseña"
               />
+              <p class="passNoCoincide"></p>
               <button class="btn btn-primary" type="submit">Registrarse</button>
             </form>
           </div>

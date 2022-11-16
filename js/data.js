@@ -35,24 +35,7 @@ const productos = [
   },
 ];
 
-const usuarios = [
-  {
-    nombreUsuario: "federico",
-    pass: "abc123",
-    newsleter: "no",
-    categoria: "admin",
-    estado: "ok",
-    email: "fede@hola.com",
-  },
-  {
-    nombreUsuario: "juan",
-    pass: "abc123",
-    newsleter: "no",
-    categoria: "user",
-    estado: "ok",
-    email: "fede@hola.com",
-  },
-];
+
 class Producto {
   constructor(nombreProducto, categoria, precio) {
     this.nombreProducto = nombreProducto;
@@ -74,6 +57,30 @@ class ProductoCarrito {
 
 let usuarioLogueado = "deslog"
 let carrito 
+let usuarios =[]
+
+if (localStorage.getItem('usuarios')) {
+  usuarios = JSON.parse(localStorage.getItem('usuarios'))
+} else {
+  usuarios = [
+    {
+      nombreUsuario: "federico",
+      pass: "abc123",
+      categoria: "admin",
+      estado: "ok",
+      email: "fede@hola.com",
+    },
+    {
+      nombreUsuario: "juan",
+      pass: "abc123",
+      categoria: "user",
+      estado: "ok",
+      email: "fede@hola.com",
+    },
+  ]
+ 
+}
+
 
 if (localStorage.getItem('carrito')) {
   carrito = JSON.parse(localStorage.getItem('carrito'))
