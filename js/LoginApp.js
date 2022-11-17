@@ -11,6 +11,7 @@ deslog.classList = "btn btn-primary deslog"
 formLogin.classList = 'd-none'
 }
 
+
 const formLogin = document.getElementById("formLogin");
 formLogin.addEventListener("submit", validarLogin);
 
