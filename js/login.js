@@ -26,8 +26,8 @@ function validarLogin(e) {
   );
   indexUsuario >= 0 ? verificarPass() : usuarioIncorrecto();
 
-  limpiarUsuarioIngresado.addEventListener("keyup", limpiarUsuarioIncorrecto);
-  limpiarPassIngresado.addEventListener("keyup", limpiarPassIincorrecta);
+  limpiarUsuarioIngresado.addEventListener("keydown", limpiarUsuarioIncorrecto);
+  limpiarPassIngresado.addEventListener("keydown", limpiarPassIincorrecta);
 
   function limpiarUsuarioIncorrecto () {
     const usuarioIncorrecto = document.querySelector(".usuarioIncorrecto")
@@ -101,8 +101,8 @@ function funLogOut(){
 
    const usuarioExistente = usuarios.some((usuario) => usuario.nombreUsuario === nombreUsuario)
  
-   nombreUsuarioLimpiar.addEventListener("keyup", limpiarUsuarioExistente);
-   confirmPassLimpiar.addEventListener("keyup", limpiarPassNoCoincide);
+   nombreUsuarioLimpiar.addEventListener("keydown", limpiarUsuarioExistente);
+   confirmPassLimpiar.addEventListener("keydown", limpiarPassNoCoincide);
 
    usuarioExistente == true ? nombreUsuarioYaExiste() : registrarUsuario() ;
   

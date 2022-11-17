@@ -1,46 +1,77 @@
 
 //DATA//
-const categorias = ["Bajo Asiento", "Sobre Cuadro", "Frame Bag"];
+const categorias = ["Bajo Asiento", "Sobre Cuadro", "Frame Bag","Manubrio"];
 
 const productos = [
   {
     nombreProducto: "Bajo Asiento 4L",
     categoria: "bajo asiento",
     precio: 3000,
-    stock: 5,
+    imagenProducto: "../images/bajo asiento 4l.jpg"
   },
   {
-    nombreProducto: "Bajo Asiento 12L",
+    nombreProducto: "Bajo Asiento 14L",
     categoria: "bajo asiento",
     precio: 5500,
-    stock: 3,
+    imagenProducto: "../images/bajo asiento 14l.jpg"
   },
   {
     nombreProducto: "Bolso Stem",
     categoria: "sobre cuadro",
     precio: 1500,
-    stock: 10,
+    imagenProducto: "../images/bolso stem.jpg"
+    
   },
   {
-    nombreProducto: "Bolso Vela",
-    categoria: "sobre cuadro",
+    nombreProducto: "Alforja Manubrio",
+    categoria: "manubrio",
     precio: 1800,
-    stock: 4,
+    imagenProducto: "../images/alforja de manubrio.jpg"
+  },
+  {
+    nombreProducto: "Medio Frame Bag",
+    categoria: "frame bag",
+    precio: 6500,
+    imagenProducto: "../images/medio fram.jpg"
+
+  },
+  {
+    nombreProducto: "Medio Frame Doble Suspensión",
+    categoria: "frame bag",
+    precio: 6500,
+    imagenProducto: "../images/Medio Fram dobleS.jpg"
+
   },
   {
     nombreProducto: "Frame Completo",
     categoria: "frame bag",
     precio: 6500,
-    stock: 7,
+    imagenProducto: "../images/frame un bolsillo.jpg"
+
+  },
+  {
+    nombreProducto: "Frame Doble Bolsillo",
+    categoria: "frame bag",
+    precio: 6500,
+    imagenProducto: "../images/frame bag doble bolsillo.jpg"
+
+  },
+  {
+    nombreProducto: "Bolso Botella ",
+    categoria: "manubrio",
+    precio: 6500,
+    imagenProducto: "../images/porta botella manubrio.jpg"
+
   },
 ];
 
 
 class Producto {
-  constructor(nombreProducto, categoria, precio) {
+  constructor(nombreProducto, categoria, precio, imagenProducto) {
     this.nombreProducto = nombreProducto;
     this.categoria = categoria;
     this.precio = precio;
+    this.imagenProducto = imagenProducto;
   }
 }
 class ProductoCarrito {
