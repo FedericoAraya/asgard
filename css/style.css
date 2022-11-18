@@ -57,14 +57,29 @@ body {
       height: 20px;
       width: 20px;
       z-index: 3;
-      border-radius: 40px;
+      border-radius: 100%;
       background-color: green; }
       .header #carrito .btn .volumenCarrito p {
+        text-align: center;
+        justify-items: center;
         color: white;
         font-size: small;
         font-weight: 700; }
+  .header #carrito h5 {
+    margin-left: 20px; }
+  .header #carrito .total h5 {
+    text-align: end; }
+  .header #carrito .total .botonComprar {
+    position: relative;
+    left: 260px; }
   .header #carrito .btn-close:focus {
     box-shadow: none; }
+  .header #carrito #checkLog {
+    margin: auto; }
+  .header #carrito .offcanvas-title {
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 30px; }
   .header #carrito .cardCarrito .card {
     padding: 0;
     height: 100%;

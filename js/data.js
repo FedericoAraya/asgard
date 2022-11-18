@@ -117,6 +117,7 @@ if (localStorage.getItem("usuarioLogueado")) {
 const cardsCarrito = document.querySelector(".cardCarrito");
 
 if (carrito.length > 0) {
+  
   renderizarCarrito();
 }
 
@@ -149,21 +150,38 @@ function renderizarCarrito() {
     cardsCarrito.append(cardCarrito);
   });
   const volumenCarrito = document.querySelector(".carrito");
-        carrito.forEach((producto) => {
-          const lengthCarrito = document.createElement("div");
-          lengthCarrito.classList = "volumenCarrito";
-          lengthCarrito.innerHTML = `        
+        
+        const lengthCarrito = document.createElement("div");
+        lengthCarrito.classList = "volumenCarrito";
+        lengthCarrito.innerHTML = `        
                     <p class="lengthCarrito">${carrito.length}</p>      
               `;
         volumenCarrito.append(lengthCarrito)
-            });
+
+        let sumaCarrito = 0
+        
+          carrito.forEach((producto)=>{
+          sumaCarrito = sumaCarrito+producto.precio*producto.cantidad;
+          
+        })
+        
+        const total = document.querySelector(".total");
+        const comprar = document.createElement("div");
+        comprar.classList = "totalCarrito";
+        comprar.innerHTML = `        
+        <h5>Total = $${sumaCarrito}</h5>
+        <button class="botonComprar btn btn-primary">Comprar</button>
+        `;
+        total.innerHTML = ""  
+        total.append(comprar)       
+         
 }
 
 if (usuarioLogueado != "deslog") {
   const logoLogin = document.querySelectorAll(".logoLogin");
   const saludo = document.querySelectorAll(".saludo");
   saludo[0].innerHTML = `Hola, ${usuarios[usuarioLogueado].nombreUsuario}`;
-  saludo[1].innerHTML = `Hola, ${usuarios[usuarioLogueado].nombreUsuario}`;
+  saludo[1].innerHTML = `<h5>${usuarios[usuarioLogueado].nombreUsuario}, estos son tus productos seleccionados:</h5>`;
   logoLogin[0].style.backgroundColor = "#66c70c";
   logoLogin[0].style.borderRadius = "40px";
   logoLogin[1].style.backgroundColor = "#66c70c";
@@ -174,4 +192,9 @@ if (usuarioLogueado != "deslog") {
     adminVisibleD.classList = "nav-link d-block adminVisibleD";
     adminVisibleM.classList = "nav-item d-block adminVisibleM";
   }
-}
+  
+}else{
+  const checkLog = document.querySelector("#checkLog");
+  checkLog.classList = "";
+     }
+
