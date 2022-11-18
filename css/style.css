@@ -52,6 +52,18 @@ body {
       border-color: transparent; }
   .header #carrito .btn-close:focus {
     box-shadow: none; }
+  .header #carrito .cardCarrito .card {
+    padding: 0;
+    height: 100%;
+    font-size: small !important; }
+    .header #carrito .cardCarrito .card .card-body {
+      padding: 3px; }
+      .header #carrito .cardCarrito .card .card-body p {
+        margin: 0; }
+    .header #carrito .cardCarrito .card img {
+      max-height: 100px;
+      margin: 0;
+      padding: 0; }
   .header #carrito .carrito img {
     width: 30px; }
   .header .navbar-brand img {
