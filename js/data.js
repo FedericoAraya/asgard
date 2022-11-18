@@ -139,9 +139,15 @@ function renderizarCarrito() {
         <div class="col-6">
         <div class="card-body">
         <h5 >${producto.nombreProducto}</h5>
-        <p c>$${producto.precio}</p>
-        <small >Cantidad = ${producto.cantidad}</small>
-        </p>
+        <p class="precioCard">$${producto.precio}</p>
+        <div class=" itemsCantidad">
+        <small >Cantidad : <button class="btn sumarUno ">+
+        </button>${producto.cantidad}<button class="btn restarUno ">
+        -</button></small>
+        <button class="btn trash ">
+        <img  src="../images/trash.png" alt="">
+        </button>
+        </div>
         </div>
         </div>
         </div>       
@@ -165,6 +171,8 @@ function renderizarCarrito() {
           
         })
         
+
+        if (usuarioLogueado != "deslog") {
         const total = document.querySelector(".total");
         const comprar = document.createElement("div");
         comprar.classList = "totalCarrito";
@@ -174,7 +182,7 @@ function renderizarCarrito() {
         `;
         total.innerHTML = ""  
         total.append(comprar)       
-         
+        }
 }
 
 if (usuarioLogueado != "deslog") {

@@ -56,7 +56,6 @@ body {
       right: 15px;
       height: 20px;
       width: 20px;
-      z-index: 3;
       border-radius: 100%;
       background-color: green; }
       .header #carrito .btn .volumenCarrito p {
@@ -65,13 +64,13 @@ body {
         color: white;
         font-size: small;
         font-weight: 700; }
-  .header #carrito h5 {
-    margin-left: 20px; }
   .header #carrito .total h5 {
     text-align: end; }
   .header #carrito .total .botonComprar {
     position: relative;
-    left: 260px; }
+    left: 260px;
+    background-color: black !important;
+    border: 3px solid red; }
   .header #carrito .btn-close:focus {
     box-shadow: none; }
   .header #carrito #checkLog {
@@ -85,13 +84,31 @@ body {
     height: 100%;
     font-size: small !important; }
     .header #carrito .cardCarrito .card .card-body {
-      padding: 3px; }
-      .header #carrito .cardCarrito .card .card-body p {
+      padding: 3px;
+      margin-left: 10px; }
+      .header #carrito .cardCarrito .card .card-body h5 {
+        font-size: medium;
+        margin-top: 4px; }
+      .header #carrito .cardCarrito .card .card-body .precioCard {
         margin: 0; }
+      .header #carrito .cardCarrito .card .card-body img {
+        width: 15px; }
+      .header #carrito .cardCarrito .card .card-body .trash {
+        margin-bottom: 10px; }
     .header #carrito .cardCarrito .card img {
       max-height: 100px;
       margin: 0;
       padding: 0; }
+    .header #carrito .cardCarrito .card .itemsCantidad {
+      display: flex; }
+      .header #carrito .cardCarrito .card .itemsCantidad small button {
+        padding: 0;
+        margin: 0;
+        width: 25px;
+        font-size: large;
+        text-align: center; }
+      .header #carrito .cardCarrito .card .itemsCantidad small .restarUno {
+        padding-bottom: 3px; }
   .header #carrito .carrito img {
     width: 30px; }
   .header .navbar-brand img {
@@ -148,14 +165,18 @@ body {
     .mainLogin #nav-tabContent .form form input {
       margin: 10px 5px;
       font-size: smaller; }
+    .mainLogin #nav-tabContent .form form .btn {
+      background-color: black !important;
+      border: 3px solid red;
+      font-size: larger; }
     .mainLogin #nav-tabContent .form form p {
       font-size: xx-small;
       color: red;
       padding-left: 10px; }
     .mainLogin #nav-tabContent .form form button {
       margin: 10px;
-      background-color: #707070;
-      border: none; }
+      background-color: black !important;
+      border: 3px solid red; }
 
 .mainNosotros {
   background-image: linear-gradient(to top, #d8d8d8, #ffffff); }
@@ -230,15 +251,17 @@ body {
   .mainTienda h2 {
     margin-top: 15px;
     text-align: center; }
-  .mainTienda #productos {
+  .mainTienda #productosTienda {
     padding: 10px; }
-    .mainTienda #productos .card {
-      border: grey 2px solid;
-      background-color: #dfdcf1; }
-      .mainTienda #productos .card img {
+    .mainTienda #productosTienda .card {
+      border: 3px solid black; }
+      .mainTienda #productosTienda .card img {
         object-fit: cover;
         height: 100%;
         width: 100%; }
+      .mainTienda #productosTienda .card .card-body button {
+        background-color: black !important;
+        border: 3px solid red; }
 
 .footer {
   display: flex;

@@ -79,7 +79,6 @@
         right: 15px;
         height: 20px;
         width: 20px;
-        z-index: 3;
         border-radius: 100%;
         background-color: green;
         p{
@@ -91,9 +90,7 @@
         }
       }
     }
-    h5{
-      margin-left: 20px;
-    }
+    
     .total{
       h5{
         text-align: end;
@@ -101,6 +98,10 @@
       .botonComprar{
         position: relative;
        left:260px;
+       
+        background-color: black !important;
+        border: 3px solid red;
+      
       }
     }
     .btn-close {      
@@ -123,15 +124,44 @@
         font-size: small!important;
         .card-body{
           padding: 3px;
-          p{
+          margin-left: 10px;
+          h5{
+            font-size: medium;
+            margin-top: 4px;
+          }
+          .precioCard{
             margin: 0;
+          }
+          img{
+            width: 15px;
+          }
+          .trash{
+            margin-bottom: 10px;
           }
         }
       img{
         max-height: 100px;
         margin: 0;
         padding: 0;
-      }}
+      }
+      .itemsCantidad{
+        display: flex;
+        small{
+        button{
+          padding: 0;
+          margin: 0;
+          width: 25px;
+          font-size: large;
+          text-align: center;
+                 }
+        .restarUno{
+          padding-bottom: 3px;
+        }
+        
+        }
+      }
+      
+    }
     }
     .carrito {
       img {

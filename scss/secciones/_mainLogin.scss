@@ -16,6 +16,12 @@
         input {
           margin: 10px 5px;
           font-size: smaller;
+          
+        }
+        .btn{
+          background-color: black !important;
+          border: 3px solid red;
+          font-size: larger;
         }
         p{
           font-size: xx-small;
@@ -24,8 +30,11 @@
         }
         button {
           margin: 10px;
-          background-color: #707070;
-          border: none;
+         
+            background-color: black !important;
+            border: 3px solid red;
+          
+          
         }
       }
     }
