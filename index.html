@@ -32,7 +32,10 @@
               data-bs-target="#offcanvasNavbar"
               aria-controls="offcanvasNavbar"
             >
-              <img src="./images/menu-hamburguesa.png" alt="menu hamburguesa" />
+              <img
+                src="../images/menu-hamburguesa.png"
+                alt="menu hamburguesa"
+              />
             </button>
             <div
               class="offcanvas offcanvas-start"
@@ -64,9 +67,7 @@
                     <a class="nav-link" href="./pages/tienda.html">Tienda</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./pages/nosotros.html"
-                      >Nosotros</a
-                    >
+                    <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="./pages/pagosYEnvios.html"
@@ -74,9 +75,7 @@
                     >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./pages/contacto.html"
-                      >Contacto</a
-                    >
+                    <a class="nav-link" href="./pages/contacto.html">Contacto</a>
                   </li>
                   <li class="nav-item d-none adminVisibleM">
                     <a class="nav-link" href="./pages/admin.html">Admin</a>
@@ -85,14 +84,10 @@
                     <a
                       class="nav-link d-flex flex-row login"
                       href="./pages/login.html"
-                      ><img
-                        class="logoLogin"
-                        src="./images/loginIcon.png"
-                        alt="Icono Login"
-                      />
+                      ><img  class="logoLogin" src="./images/loginIcon.png" alt="Icono Login" />
                       <p class="p-2">LOGIN</p></a
                     >
-                  </li>
+                                      </li>
                 </ul>
               </div>
             </div>
@@ -106,16 +101,17 @@
               ><img src="./images/logo-asgard.png" alt="Logo Asgard"
             /></a>
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="./index.html"
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="./index.html"
                 >Inicio</a
               >
               <a class="nav-link" href="./pages/tienda.html">Tienda</a>
               <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
-              <a class="nav-link" href="./pages/pagosYEnvios.html"
-                >Pagos y Envios</a
-              >
+              <a class="nav-link" href="./pages/pagosYEnvios.html">Pagos y Envios</a>
               <a class="nav-link" href="./pages/contacto.html">Contactos</a>
-              <a class="nav-link adminVisibleD d-none" href="./pages/admin.html"
+              <a class="nav-link adminVisibleD d-none" href="/pages/admin.html"
                 >Admin</a
               >
               <a class="nav-link" href="./pages/login.html"
@@ -145,7 +141,8 @@
           data-bs-target="#offcanvasScrolling"
           aria-controls="offcanvasScrolling"
         >
-          <img src="./images/carrito.png" alt="Carrito" />
+        <img src="./images/carrito.png" alt="Carrito" />
+          
         </button>
         <div
           class="offcanvas offcanvas-end collapse"
@@ -156,9 +153,10 @@
           aria-labelledby="offcanvasScrollingLabel"
         >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+            
+            <h4 class="offcanvas-title" id="offcanvasScrollingLabel">
               Carrito
-            </h5>
+            </h4>
             <button
               type="button"
               class="btn-close"
@@ -166,33 +164,20 @@
               aria-label="Close"
             ></button>
           </div>
-          <h6 class="saludo m-2"></h6>
+          <h6 class="saludo m-2" ></h6>
+          <div id="checkLog"   class="d-none">
+            <p>Para comprar debes estar <a href="./pages/login.html">Registrado</a></p>
+          </div>
           <div class="offcanvas-body">
             <div class="cardCarrito">
-              <div class="card mb-3" style="max-width: 540px">
-                <div class="row g-0">
-                  <div class="col-5">
-                    <img
-                      src="./images/bajo-asiento.jpeg"
-                      class="img-fluid rounded-start"
-                      alt="bajo asiento 14l"
-                    />
-                  </div>
-                  <div class="col-7">
-                    <div class="card-body">
-                      <h5 class="card-title">Producto</h5>
-                      <p class="card-text">Precio</p>
-                      <p class="card-text">
-                        <small class="text-muted">Cantidad</small>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                            </div>
+              <div class="total">
+            </div>
             </div>
           </div>
         </div>
       </div>
+   
       <!-- offcanvas carrito -->
     </header>
     <main class="mainIndex d-flex flex-column">
