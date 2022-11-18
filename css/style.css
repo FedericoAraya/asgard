@@ -50,6 +50,19 @@ body {
     margin-right: 10px; }
     .header #carrito .btn:active {
       border-color: transparent; }
+    .header #carrito .btn .volumenCarrito {
+      position: absolute;
+      bottom: 30px;
+      right: 15px;
+      height: 20px;
+      width: 20px;
+      z-index: 3;
+      border-radius: 40px;
+      background-color: green; }
+      .header #carrito .btn .volumenCarrito p {
+        color: white;
+        font-size: small;
+        font-weight: 700; }
   .header #carrito .btn-close:focus {
     box-shadow: none; }
   .header #carrito .cardCarrito .card {

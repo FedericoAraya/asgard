@@ -41,6 +41,7 @@ function agregarProdusctoCarrito(e) {
       (posicion) => posicion.id == productoSeleccionado
     );
     carrito[indexSumarProd].cantidad = carrito[indexSumarProd].cantidad + 1;
+    
   } else {
     class ProductoCarrito {
       constructor(nombreProducto, precio, imagen, cantidad, id) {
@@ -60,8 +61,12 @@ function agregarProdusctoCarrito(e) {
     );
 
     carrito.push(prod);
+      
   }
   localStorage.setItem("carrito", JSON.stringify(carrito));
+  cardsCarrito.innerHTML = ""
+  renderizarCarrito()
+
 }
 
 renderizarTienda();

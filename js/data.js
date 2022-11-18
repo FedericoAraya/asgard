@@ -144,14 +144,19 @@ function renderizarCarrito() {
         </div>
         </div>
         </div>       
-        `;
+        `;      
 
     cardsCarrito.append(cardCarrito);
   });
-  // const botonAgregarAlCarrito = document.querySelectorAll('.agregarAlCarrito')
-  // botonAgregarAlCarrito.forEach((boton) => {
-  //     boton.addEventListener('click', agregarProdusctoCarrito)
-  //})
+  const volumenCarrito = document.querySelector(".carrito");
+        carrito.forEach((producto) => {
+          const lengthCarrito = document.createElement("div");
+          lengthCarrito.classList = "volumenCarrito";
+          lengthCarrito.innerHTML = `        
+                    <p class="lengthCarrito">${carrito.length}</p>      
+              `;
+        volumenCarrito.append(lengthCarrito)
+            });
 }
 
 if (usuarioLogueado != "deslog") {
