@@ -69,25 +69,31 @@ body {
   .mainIndex .bikePacking {
     margin-top: 20px; }
     .mainIndex .bikePacking h2 {
-      text-align: center; }
+      text-align: left;
+      padding-left: 40px; }
     .mainIndex .bikePacking img {
-      width: 40%;
+      width: auto;
+      max-height: 200px;
       float: left;
       padding: 5px 10px 10px 10px; }
     .mainIndex .bikePacking .bikePackingText {
       text-align: justify;
       font-size: 12px;
       margin: 10px; }
-  .mainIndex .hechoAMano h3 {
-    text-align: center; }
-  .mainIndex .hechoAMano video {
-    width: 40%;
-    padding: 10px;
-    float: left; }
-  .mainIndex .hechoAMano .hechoAManoText {
-    text-align: justify;
-    font-size: 12px;
-    margin: 10px; }
+  .mainIndex .hechoAMano {
+    margin-top: 20px; }
+    .mainIndex .hechoAMano h3 {
+      text-align: left;
+      padding-left: 40px; }
+    .mainIndex .hechoAMano video {
+      width: auto;
+      max-height: 200px;
+      padding: 10px;
+      float: left; }
+    .mainIndex .hechoAMano .hechoAManoText {
+      text-align: justify;
+      font-size: 12px;
+      margin: 10px; }
 
 .mainLogin {
   align-items: center;
@@ -140,12 +146,15 @@ body {
     max-height: 40vh;
     object-fit: cover;
     object-position: 0 60%; }
-  .mainContacto .redes img {
-    width: 25px;
-    margin: 30px; }
-  .mainContacto .copirigth p {
-    margin: auto 0 !important; }
+  .mainContacto .redes {
+    display: flex;
+    justify-content: center; }
+    .mainContacto .redes img {
+      width: 25px;
+      margin: 30px; }
   .mainContacto .formConsulta {
+    margin: auto;
+    max-width: 500px;
     grid-area: formulario;
     padding: 20px; }
     .mainContacto .formConsulta h3 {
@@ -154,13 +163,21 @@ body {
       display: grid;
       grid-template-columns: max-content;
       justify-content: center;
-      gap: 10px;
+      gap: 15px;
       padding: 5px; }
-      .mainContacto .formConsulta .inpConsulta input {
-        padding: 2px; }
-        .mainContacto .formConsulta .inpConsulta input:hover {
-          border: solid 2px black;
-          border-radius: 3px; }
+      .mainContacto .formConsulta .inpConsulta #checkbox {
+        width: 100%; }
+      .mainContacto .formConsulta .inpConsulta .info {
+        width: 100%;
+        text-align: center; }
+      .mainContacto .formConsulta .inpConsulta textarea {
+        width: 100%; }
+    .mainContacto .formConsulta input {
+      padding: 2px;
+      width: 100%; }
+      .mainContacto .formConsulta input:hover {
+        border: solid 2px black;
+        border-radius: 3px; }
 
 .mainTienda {
   background-image: linear-gradient(to top, #d8d8d8, #ffffff);

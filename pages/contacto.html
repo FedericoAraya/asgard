@@ -195,15 +195,15 @@
     </header>
     <main class="mainContacto">
       <img class="imagenContactoMain" src="../images/fondo lago.jpg" alt="Paisaje lago con bici">
-      <div class="redes">
+      <div class="redes ">
         <a href=""><img src="../images/whatsapp.png" alt="Logo WhatsApp" /></a>
         <a href="https://www.instagram.com/asgardequipamiento/"><img src="../images/instagram.png" alt="Logo instagram"/></a>
-        <a href="https://www.facebook.com/asgardequipamiento"><img src="" alt="Facebook"/></a>
+        <a href="https://www.facebook.com/asgardequipamiento"><img src="../images/logofacebook.png" alt="Facebook"/></a>
       </div>
       <div class="formConsulta">
         <h3>Consulta:</h3>
         <form
-          class="inpConsulta"
+          class="inpConsulta d-flex flex-wrap"
           action="https://formspree.io/f/meqdevkd"
           target="_blank"
           method="POST"
@@ -217,10 +217,10 @@
           <input type="tel" name="Telefono" placeholder="Telefono" required />
           <input type="email" name="email" placeholder="E-mail" required />
           <textarea name="message" required> Hola, me gustaria saber </textarea>
-          <div>Desea recibir información?</div>
-          <input type="checkbox" name="recibirInfo" id="1" />
+          <div class="info">Desea recibir información?</div>
+          <input type="checkbox" name="recibirInfo" id="checkbox" />
           <input class="enviarTurno" type="submit" value="Enviar" />
-          <input class="enviarTurno" type="reset" value="Limpiar formulario" />
+          <input class="limpiarForm" type="reset" value="Limpiar formulario" />
         </form>
       </div>
     </main>
