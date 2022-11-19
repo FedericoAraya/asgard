@@ -27,6 +27,7 @@ function agregarProdusctoCarrito(e) {
   const productoSeleccionado = e.target
     .closest(".agregarAlCarrito")
     .getAttribute("idProd");
+
   const indexProd = productos.findIndex(
     (posicion) => posicion.id == productoSeleccionado
   );
