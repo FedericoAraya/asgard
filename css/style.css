@@ -31,6 +31,10 @@ body {
       width: 100px;
       z-index: 5;
       background-color: white; }
+      .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-header img .btn-close {
+        box-shadow: none !important; }
+        .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-header img .btn-close:focus {
+          box-shadow: none !important; }
     .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-body .navbar-nav .login {
       align-items: center; }
       .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-body .navbar-nav .login img {
@@ -60,6 +64,7 @@ body {
       height: 20px;
       width: 20px;
       border-radius: 100%;
+      z-index: -1;
       background-color: green; }
       .header #carrito .btn .volumenCarrito p {
         text-align: center;

@@ -27,6 +27,12 @@
             width: 100px;
             z-index: 5;
             background-color: white;
+            .btn-close{
+              box-shadow: none!important;
+             &:focus{
+              box-shadow: none!important;
+             }
+            }
           }
         }
         .offcanvas-body {
@@ -79,6 +85,7 @@
         height: 20px;
         width: 20px;
         border-radius: 100%;
+        z-index: -1;
         background-color: green;
         p {
           text-align: center;
