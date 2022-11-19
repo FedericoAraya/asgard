@@ -162,7 +162,7 @@ body {
 .mainLogin {
   align-items: center;
   min-height: 100vh;
-  background-image: url("../../images/sendero en montaña.jpg");
+  background-image: url("../images/sendero en montaña.jpg");
   background-position: top; }
   .mainLogin #nav-tab {
     margin-top: 100px; }
