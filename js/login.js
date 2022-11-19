@@ -82,6 +82,7 @@ function loguear(){
     const index = usuarios.findIndex(
       (posicion) => posicion.nombreUsuario === usuarioIngresado )
       localStorage.setItem('usuarioLogueado', index)
+      location.reload()
 }
 }  
 const logOut = document.querySelector(".deslog");

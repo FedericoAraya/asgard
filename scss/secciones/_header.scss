@@ -91,12 +91,14 @@
     }
 
     .total {
+      display: flex;
+      justify-content: end;
       h5 {
         text-align: end;
       }
       .botonComprar {
-        position: relative;
-        left: 260px;
+        position:inherit;
+        justify-items: end;
 
         background-color: black !important;
         border: 3px solid red;

@@ -67,13 +67,16 @@ body {
         color: white;
         font-size: small;
         font-weight: 700; }
-  .header #carrito .total h5 {
-    text-align: end; }
-  .header #carrito .total .botonComprar {
-    position: relative;
-    left: 260px;
-    background-color: black !important;
-    border: 3px solid red; }
+  .header #carrito .total {
+    display: flex;
+    justify-content: end; }
+    .header #carrito .total h5 {
+      text-align: end; }
+    .header #carrito .total .botonComprar {
+      position: inherit;
+      justify-items: end;
+      background-color: black !important;
+      border: 3px solid red; }
   .header #carrito .btn-close:focus {
     box-shadow: none; }
   .header #carrito #checkLog {
