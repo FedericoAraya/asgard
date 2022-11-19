@@ -116,13 +116,6 @@ if (localStorage.getItem("usuarioLogueado")) {
 
 const cardsCarrito = document.querySelector(".cardCarrito");
 
-console.log(window.location.pathname);
- let correctorDeLink = ""
- if (window.location.pathname != "/asgard/index.html" ||"/asgard" ) {
-   correctorDeLink = "."
- }
-
-console.log(correctorDeLink);
 
 if (carrito.length > 0) {  
   renderizarCarrito();
@@ -130,9 +123,7 @@ if (carrito.length > 0) {
 
 function renderizarCarrito() {
   
-  carrito.forEach((producto) => {
-    console.log(producto.imagen);
-    console.log(correctorDeLink+producto.imagen);
+  carrito.forEach((producto) => {  
     const cardCarrito = document.createElement("div");
     cardCarrito.classList = "card mb-3";
     cardCarrito.setAttribute("idProd", producto.id);
@@ -141,7 +132,7 @@ function renderizarCarrito() {
         <div class="row g-0">
         <div class="col-5">
         <img
-        src="${correctorDeLink+producto.imagen}"
+        src="${producto.imagen}"
         class="rounded-start"
         alt="..."
         />
