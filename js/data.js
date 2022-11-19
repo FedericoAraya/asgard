@@ -130,6 +130,7 @@ if (carrito.length > 0) {
 function renderizarCarrito() {
   
   carrito.forEach((producto) => {
+    console.log(producto.imagen);
     const cardCarrito = document.createElement("div");
     cardCarrito.classList = "card mb-3";
     cardCarrito.setAttribute("idProd", producto.id);
