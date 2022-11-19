@@ -31,10 +31,8 @@ body {
       width: 100px;
       z-index: 5;
       background-color: white; }
-      .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-header img .btn-close {
-        box-shadow: none !important; }
-        .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-header img .btn-close:focus {
-          box-shadow: none !important; }
+      .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-header img .btn-close:focus {
+        box-shadow: none; }
     .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-body .navbar-nav .login {
       align-items: center; }
       .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-body .navbar-nav .login img {
