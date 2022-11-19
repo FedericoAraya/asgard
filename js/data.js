@@ -116,10 +116,12 @@ if (localStorage.getItem("usuarioLogueado")) {
 
 const cardsCarrito = document.querySelector(".cardCarrito");
 
-let correctorDeLink = ""
+let correctorDeLink = " "
 if (window.location.pathname != "/index.html") {
   correctorDeLink = "."
 }
+
+console.log(correctorDeLink);
 
 if (carrito.length > 0) {  
   renderizarCarrito();
