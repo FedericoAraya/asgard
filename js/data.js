@@ -117,7 +117,7 @@ if (localStorage.getItem("usuarioLogueado")) {
 const cardsCarrito = document.querySelector(".cardCarrito");
 
  let correctorDeLink = ""
- if (window.location.pathname != "/index.html") {
+ if (window.location.pathname != "/asgard/index.html" ||"/asgard" ) {
    correctorDeLink = "."
  }
 
