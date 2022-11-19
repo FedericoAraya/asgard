@@ -5,21 +5,21 @@ const productos = [
     nombreProducto: "Bajo Asiento 4L",
     categoria: "bajo asiento",
     precio: 3000,
-    imagenProducto: "../images/bajo asiento 4l.jpg",
+    imagenProducto: "./images/bajo asiento 4l.jpg",
     id: 1,
   },
   {
     nombreProducto: "Bajo Asiento 14L",
     categoria: "bajo asiento",
     precio: 5500,
-    imagenProducto: "../images/bajo asiento 14l.jpg",
+    imagenProducto: "./images/bajo asiento 14l.jpg",
     id: 2,
   },
   {
     nombreProducto: "Bolso Stem",
     categoria: "sobre cuadro",
     precio: 1500,
-    imagenProducto: "../images/bolso stem.jpg",
+    imagenProducto: "./images/bolso stem.jpg",
     id: 3,
   },
 
@@ -27,42 +27,42 @@ const productos = [
     nombreProducto: "Medio Frame Bag",
     categoria: "frame bag",
     precio: 6500,
-    imagenProducto: "../images/medio fram.jpg",
+    imagenProducto: "./images/medio fram.jpg",
     id: 4,
   },
   {
     nombreProducto: "Medio Frame Doble Suspensión",
     categoria: "frame bag",
     precio: 6500,
-    imagenProducto: "../images/Medio Fram dobleS.jpg",
+    imagenProducto: "./images/Medio Fram dobleS.jpg",
     id: 5,
   },
   {
     nombreProducto: "Frame Completo",
     categoria: "frame bag",
     precio: 6500,
-    imagenProducto: "../images/frame un bolsillo.jpg",
+    imagenProducto: "./images/frame un bolsillo.jpg",
     id: 6,
   },
   {
     nombreProducto: "Frame Doble Bolsillo",
     categoria: "frame bag",
     precio: 6500,
-    imagenProducto: "../images/frame bag doble bolsillo.jpg",
+    imagenProducto: "./images/frame bag doble bolsillo.jpg",
     id: 7,
   },
   {
     nombreProducto: "Bolso Botella ",
     categoria: "manubrio",
     precio: 6500,
-    imagenProducto: "../images/porta botella manubrio.jpg",
+    imagenProducto: "./images/porta botella manubrio.jpg",
     id: 8,
   },
   {
     nombreProducto: "Alforja Manubrio",
     categoria: "manubrio",
     precio: 6000,
-    imagenProducto: "../images/alforja de manubrio.jpg",
+    imagenProducto: "./images/alforja de manubrio.jpg",
     id: 9,
   },
 ];
@@ -115,17 +115,17 @@ if (localStorage.getItem("usuarioLogueado")) {
 }
 
 const cardsCarrito = document.querySelector(".cardCarrito");
-
-
 if (carrito.length > 0) {  
   renderizarCarrito();
 }
 
-
-function renderizarCarrito() {
-  
-  carrito.forEach((producto) => {  
-    
+function renderizarCarrito() { 
+  var ajustarLink = "."
+console.log(window.location.pathname);
+if (window.location.pathname === "/index.html" ||window.location.pathname === "/asgard" ||window.location.pathname === "/asgard/index.html" || window.location.pathname ==="/asgard/" ){
+  ajustarLink = " "
+} 
+  carrito.forEach((producto) => {      
     const cardCarrito = document.createElement("div");
     cardCarrito.classList = "card mb-3";
     cardCarrito.setAttribute("idProd", producto.id);
@@ -134,7 +134,7 @@ function renderizarCarrito() {
         <div class="row g-0">
         <div class="col-5">
         <img
-        src="${producto.imagen}"
+        src="${ajustarLink+producto.imagen}"
         class="rounded-start"
         alt="..."
         />
@@ -148,7 +148,7 @@ function renderizarCarrito() {
         </button>${producto.cantidad}<button class="btn restarUno ">
         -</button></small>
         <button class="btn trash ">
-        <img  src="../images/trash.png" alt="">
+        <img  src="${ajustarLink}./images/trash.png" alt="">
         </button>
         </div>
         </div>

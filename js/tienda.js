@@ -7,7 +7,7 @@ const renderizarTienda = () => {
     cardProducto.setAttribute("idProd", producto.id);
     cardProducto.style = "width: 18rem;";
     cardProducto.innerHTML = `        
-        <img src="${producto.imagenProducto}" class="card-img-top" alt="...">
+        <img src=".${producto.imagenProducto}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${producto.nombreProducto}</h5>
           <p class="card-text">${producto.categoria}</p>
@@ -65,6 +65,7 @@ function agregarProdusctoCarrito(e) {
   }
   localStorage.setItem("carrito", JSON.stringify(carrito));
   cardsCarrito.innerHTML = ""
+  
   renderizarCarrito()
 
 }
