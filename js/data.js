@@ -129,14 +129,14 @@ function renderizarCarrito() {
     cardCarrito.style = "max-height: 100px;";
     cardCarrito.innerHTML = `        
         <div class="row g-0">
-        <div class="col-6">
+        <div class="col-5">
         <img
         src="${producto.imagen}"
-        class="img-fluid rounded-start"
+        class="rounded-start"
         alt="..."
         />
         </div>
-        <div class="col-6">
+        <div class="col-7">
         <div class="card-body">
         <h5 >${producto.nombreProducto}</h5>
         <p class="precioCard">$${producto.precio}</p>

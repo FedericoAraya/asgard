@@ -3,9 +3,11 @@ const formRegistrarse = document.querySelector('#formRegistrarse')
 const botonRegistrarse = document.querySelector('.botonRegistrarse') 
 const botonLog = document.querySelector('.botonLog')
 const deslog = document.querySelector('.deslog') 
+const loginTitulo = document.querySelector('.loginTitulo')
 const formLogin = document.querySelector('#formLogin')
 formRegistrarse.classList = 'd-none'
 botonRegistrarse.classList = 'd-none'
+loginTitulo.classList = 'd-none'
 botonLog.classList = "btn btn-primary botonLog d-none"
 deslog.classList = "btn btn-primary deslog"
 formLogin.classList = 'd-none'
@@ -57,6 +59,7 @@ function loguear(){
   const botonRegistrarse = document.querySelector('.botonRegistrarse') 
   const botonLog = document.querySelector('.botonLog')
   const deslog = document.querySelector('.deslog') 
+  const loginTitulo = document.querySelector('.loginTitulo')
   const formLogin = document.querySelector('#formLogin')
     saludo[0].innerHTML = `Hola, ${usuarioIngresado}`    
     saludo[1].innerHTML = `Hola, ${usuarioIngresado}`  
@@ -68,6 +71,7 @@ function loguear(){
     botonRegistrarse.classList = 'd-none'
     botonLog.classList = "btn btn-primary botonLog d-none"
     deslog.classList = "btn btn-primary deslog"
+    loginTitulo.classList = 'd-none'
     formLogin.classList = 'd-none'
     if (usuarios[indexUsuario].categoria == "admin" ){
       const adminVisibleM = document.querySelector('.adminVisibleM')

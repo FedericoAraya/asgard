@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -26,13 +27,15 @@ body {
         box-shadow: none; }
       .header .nav-responsive .nav-mobile .navbar-toggler img {
         width: 30px; }
-    .header .nav-responsive .nav-mobile .offcanvas-header img {
-      width: 100px; }
-    .header .nav-responsive .nav-mobile .offcanvas-body .navbar-nav .login {
+    .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-header img {
+      width: 100px;
+      z-index: 5;
+      background-color: white; }
+    .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-body .navbar-nav .login {
       align-items: center; }
-      .header .nav-responsive .nav-mobile .offcanvas-body .navbar-nav .login img {
+      .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-body .navbar-nav .login img {
         width: 25px; }
-      .header .nav-responsive .nav-mobile .offcanvas-body .navbar-nav .login p {
+      .header .nav-responsive .nav-mobile #offcanvasNavbar .offcanvas-body .navbar-nav .login p {
         margin: 0; }
   .header .nav-desck .navbar-nav {
     display: flex;
@@ -83,22 +86,26 @@ body {
     padding: 0;
     height: 100%;
     font-size: small !important; }
+    .header #carrito .cardCarrito .card .row {
+      align-items: center; }
+      .header #carrito .cardCarrito .card .row .col-5 .rounded-start {
+        width: 100%;
+        margin: auto; }
     .header #carrito .cardCarrito .card .card-body {
       padding: 3px;
       margin-left: 10px; }
       .header #carrito .cardCarrito .card .card-body h5 {
         font-size: medium;
-        margin-top: 4px; }
+        margin-top: 4px;
+        margin-bottom: 0; }
       .header #carrito .cardCarrito .card .card-body .precioCard {
         margin: 0; }
       .header #carrito .cardCarrito .card .card-body img {
         width: 15px; }
       .header #carrito .cardCarrito .card .card-body .trash {
-        margin-bottom: 10px; }
-    .header #carrito .cardCarrito .card img {
-      max-height: 100px;
-      margin: 0;
-      padding: 0; }
+        margin-bottom: 10px;
+        margin-right: 0;
+        padding: 0; }
     .header #carrito .cardCarrito .card .itemsCantidad {
       display: flex; }
       .header #carrito .cardCarrito .card .itemsCantidad small button {
@@ -154,14 +161,33 @@ body {
 
 .mainLogin {
   align-items: center;
-  min-height: 90vh; }
+  min-height: 100vh;
+  background-image: url("../../images/sendero en montaña.jpg");
+  background-position: top; }
   .mainLogin #nav-tab {
     margin-top: 100px; }
+    .mainLogin #nav-tab .nav-link.active {
+      border-color: black; }
+    .mainLogin #nav-tab button {
+      background-color: transparent !important;
+      color: black; }
+      .mainLogin #nav-tab button:active {
+        border-color: black; }
+      .mainLogin #nav-tab button:focus-within {
+        border: 2px 2px 0px 2px solid black;
+        color: red; }
   .mainLogin #nav-tabContent .form {
     border: 1px solid black;
     border-radius: 10px;
     margin: 20px;
-    padding: 20px; }
+    padding: 20px;
+    background-color: transparent; }
+    .mainLogin #nav-tabContent .form .deslog {
+      background-color: black !important;
+      border: 3px solid red; }
+    .mainLogin #nav-tabContent .form h3 {
+      color: white;
+      font-weight: 600; }
     .mainLogin #nav-tabContent .form form input {
       margin: 10px 5px;
       font-size: smaller; }
