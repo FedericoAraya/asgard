@@ -121,9 +121,11 @@ if (carrito.length > 0) {
   renderizarCarrito();
 }
 
+
 function renderizarCarrito() {
   
   carrito.forEach((producto) => {  
+    
     const cardCarrito = document.createElement("div");
     cardCarrito.classList = "card mb-3";
     cardCarrito.setAttribute("idProd", producto.id);
@@ -132,7 +134,7 @@ function renderizarCarrito() {
         <div class="row g-0">
         <div class="col-5">
         <img
-        src=".${producto.imagen}"
+        src="${producto.imagen}"
         class="rounded-start"
         alt="..."
         />
