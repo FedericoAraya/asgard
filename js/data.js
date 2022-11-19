@@ -116,10 +116,10 @@ if (localStorage.getItem("usuarioLogueado")) {
 
 const cardsCarrito = document.querySelector(".cardCarrito");
 
-let correctorDeLink = " "
-if (window.location.pathname != "/index.html") {
-  correctorDeLink = "."
-}
+ let correctorDeLink = ""
+ if (window.location.pathname != "/index.html") {
+   correctorDeLink = "."
+ }
 
 console.log(correctorDeLink);
 
@@ -131,6 +131,7 @@ function renderizarCarrito() {
   
   carrito.forEach((producto) => {
     console.log(producto.imagen);
+    console.log(correctorDeLink+producto.imagen);
     const cardCarrito = document.createElement("div");
     cardCarrito.classList = "card mb-3";
     cardCarrito.setAttribute("idProd", producto.id);
@@ -139,7 +140,7 @@ function renderizarCarrito() {
         <div class="row g-0">
         <div class="col-5">
         <img
-        src="${correctorDeLink}${producto.imagen}"
+        src="${correctorDeLink+producto.imagen}"
         class="rounded-start"
         alt="..."
         />
