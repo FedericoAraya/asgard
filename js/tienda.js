@@ -27,9 +27,9 @@ function agregarProdusctoCarrito(e) {
   const productoSeleccionado = e.target
     .closest(".card")
     .getAttribute("idProd");
-
   const indexProd = productos.findIndex(
     (posicion) => posicion.id == productoSeleccionado
+    
   );
 
   if (
@@ -66,6 +66,21 @@ function agregarProdusctoCarrito(e) {
   cardsCarrito.innerHTML = "";
 
   renderizarCarrito();
+  
+  Toastify({
+    text: `${productos[indexProd].nombreProducto} fue agregado a su carrito`,
+    duration: 3000,
+    newWindow: true,
+    close: false,
+    gravity: "bottom", 
+    position: "right", 
+    stopOnFocus: true, 
+    style: {
+      background: "#0a6b0a",
+    },
+    onClick: function(){}
+  }).showToast();
+
 }
 
 renderizarTienda();

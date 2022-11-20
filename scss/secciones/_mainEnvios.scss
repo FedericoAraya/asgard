@@ -1,8 +1,28 @@
 .mainEnvios {
+  display: flex;
+  flex-direction: column;
   background-image: linear-gradient(to top, #d8d8d8, #ffffff);
   padding-top: 100px;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  .pagos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   img {
-    width: 100%;
+    width: 70%;
+    justify-content: center;
     padding: 20px;
   }
 }
+  .envios{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  img {
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+  }
+} }
