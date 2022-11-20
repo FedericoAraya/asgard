@@ -3,7 +3,7 @@ const cardProductos = document.getElementById("productosTienda");
 const renderizarTienda = () => {
   productos.forEach((producto) => {
     const cardProducto = document.createElement("div");
-    cardProducto.classList = "card m-auto mb-3 agregarAlCarrito";
+    cardProducto.classList = "card m-auto mb-3 ";
     cardProducto.setAttribute("idProd", producto.id);
     cardProducto.style = "width: 18rem;";
     cardProducto.innerHTML = `        
@@ -12,7 +12,7 @@ const renderizarTienda = () => {
           <h5 class="card-title">${producto.nombreProducto}</h5>
           <p class="card-text">${producto.categoria}</p>
           <p class="card-text">$${producto.precio}</p>
-          <button class="btn btn-primary ">Agregar al Carrito</button>
+          <button class="btn btn-primary agregarAlCarrito">Agregar al Carrito</button>
         </div>
       </div>`;
     cardProductos.append(cardProducto);
@@ -25,7 +25,7 @@ const renderizarTienda = () => {
 
 function agregarProdusctoCarrito(e) {
   const productoSeleccionado = e.target
-    .closest(".agregarAlCarrito")
+    .closest(".card")
     .getAttribute("idProd");
 
   const indexProd = productos.findIndex(
@@ -42,7 +42,6 @@ function agregarProdusctoCarrito(e) {
       (posicion) => posicion.id == productoSeleccionado
     );
     carrito[indexSumarProd].cantidad = carrito[indexSumarProd].cantidad + 1;
-    
   } else {
     class ProductoCarrito {
       constructor(nombreProducto, precio, imagen, cantidad, id) {
@@ -62,13 +61,11 @@ function agregarProdusctoCarrito(e) {
     );
 
     carrito.push(prod);
-      
   }
   localStorage.setItem("carrito", JSON.stringify(carrito));
-  cardsCarrito.innerHTML = ""
-  
-  renderizarCarrito()
+  cardsCarrito.innerHTML = "";
 
+  renderizarCarrito();
 }
 
 renderizarTienda();

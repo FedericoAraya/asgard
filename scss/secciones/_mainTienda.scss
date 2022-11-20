@@ -17,18 +17,22 @@
     padding: 10px;
     .card {
       border: 3px solid rgb(0, 0, 0);
-      
+
       img {
         object-fit: cover;
         height: 100%;
         width: 100%;
       }
-      .card-body{    
-      button {
-        background-color: black !important;
-        border: 3px solid red;
+      .card-body {
+        button {
+          background-color: black;
+          border: 3px solid red;
+          &:active {
+            background-color: red;
+            border: 3px solid rgb(255, 136, 0);
+          }
+        }
       }
-    }
     }
   }
 }

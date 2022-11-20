@@ -103,7 +103,7 @@
         text-align: end;
       }
       .botonComprar {
-        position:inherit;
+        position: inherit;
         justify-items: end;
 
         background-color: black !important;
@@ -128,16 +128,15 @@
         padding: 0;
         height: 100%;
         font-size: small !important;
-        .row{
+        .row {
           align-items: center;
-        .col-5{
-         
-        .rounded-start {
-          width: 100%;
-         margin: auto;
+          .col-5 {
+            .rounded-start {
+              width: 100%;
+              margin: auto;
+            }
+          }
         }
-      }
-    }
         .card-body {
           padding: 3px;
           margin-left: 10px;
@@ -168,10 +167,12 @@
               width: 25px;
               font-size: x-large;
               text-align: center;
-
             }
             .restarUno {
               padding-bottom: 4px;
+              &:hover {
+                zoom: 5%;
+              }
             }
           }
         }

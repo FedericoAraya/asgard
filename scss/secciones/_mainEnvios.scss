@@ -1,3 +1,8 @@
-#offcanvasScrolling{
-    display: block !important; 
+.mainEnvios {
+  background-image: linear-gradient(to top, #d8d8d8, #ffffff);
+  padding-top: 100px;
+  img {
+    width: 100%;
+    padding: 20px;
+  }
 }

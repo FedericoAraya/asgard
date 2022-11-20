@@ -4,16 +4,12 @@
   align-content: center;
   justify-content: space-between;
   align-items: center;
-
+  position: inherit;
+  bottom: 0;
   height: 60px;
   width: 100%;
   padding: 0px 15px;
-  background-image: linear-gradient(
-    to bottom,
-    #b3b2b2,
-    #d8d8d8,
-    #ffffff
-  );
+  background-image: linear-gradient(to bottom, #b3b2b2, #d8d8d8, #ffffff);
   .redes {
     img {
       width: 25px;
