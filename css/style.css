@@ -130,13 +130,15 @@ body {
 
 .mainIndex {
   background-image: linear-gradient(to top, #d8d8d8, #ffffff);
-  width: 100%; }
+  width: 100%;
+  min-height: 100vh; }
   .mainIndex .portada {
     width: 100%; }
     .mainIndex .portada .biciPortada img {
       width: 100%;
-      position: relative;
-      top: 0; }
+      max-height: 40vh;
+      object-fit: cover;
+      object-position: 0 60%; }
   .mainIndex .bikePacking {
     margin-top: 20px; }
     .mainIndex .bikePacking h2 {
@@ -221,28 +223,22 @@ body {
         border: 3px solid #ff8800; }
 
 .mainNosotros {
-  background-image: linear-gradient(to top, #d8d8d8, #ffffff);
-  height: 100vh; }
+  background-image: linear-gradient(to top, #d8d8d8, #ffffff); }
   .mainNosotros .imagenNosotrosMain {
     width: 100%;
     max-height: 40vh;
     object-fit: cover;
     object-position: 0 60%; }
   .mainNosotros .nosotros {
-    margin-top: 20px;
-    height: max-content; }
-    .mainNosotros .nosotros h2 {
+    padding: 20px; }
+    .mainNosotros .nosotros .nosotrosTitulo {
+      margin-top: 20px;
       text-align: center; }
     .mainNosotros .nosotros img {
-      width: auto;
-      max-height: 300px;
+      width: 50%;
+      max-width: 400px;
       float: left;
       padding: 5px 10px 10px 10px; }
-    .mainNosotros .nosotros .nosotrosText {
-      margin: 0;
-      font-size: medium;
-      padding: 10px;
-      height: max-content; }
 
 .mainContacto {
   background-image: linear-gradient(to top, #d8d8d8, #ffffff);
