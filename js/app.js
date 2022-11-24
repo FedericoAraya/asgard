@@ -129,7 +129,7 @@ function eliminarProducto(e) {
   const indexProd = carrito.findIndex(
     (posicion) => posicion.id == productoSeleccionado
   );
-  console.log(indexProd);
+
    carrito.splice(indexProd,1)
  
   localStorage.setItem("carrito", JSON.stringify(carrito));
