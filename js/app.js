@@ -47,7 +47,7 @@ function renderizarCarrito() {
         <small >Cantidad : <button class="btn sumarUno ">+
         </button>${producto.cantidad}<button class="btn restarUno ">
         -</button></small>
-        <button class="btn trash ">
+        <button class="btn">
         <img class="trash " src="${ajustarLink}./images/trash.png" alt="">
         </button>
         </div>
@@ -129,6 +129,7 @@ function eliminarProducto(e) {
   const indexProd = carrito.findIndex(
     (posicion) => posicion.id == productoSeleccionado
   );
+  console.log(indexProd);
    carrito.splice(indexProd,1)
  
   localStorage.setItem("carrito", JSON.stringify(carrito));
