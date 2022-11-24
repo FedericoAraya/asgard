@@ -2,53 +2,58 @@
   align-items: center;
   min-height: 100vh;
   background-image: url("../images/sendero en montaña.jpg");
-  
+
   background-position: top;
 
   #nav-tab {
-    
     margin-top: 100px;
-    .nav-link.active{
-    border-color: black;
-  }
-    button{
-    background-color: transparent!important;
-    color: black;
-    &:active{
+    .nav-link.active {
       border-color: black;
     }
-    &:focus-within{
-      border: 2px 2px 0px 2px solid black;
-      color: red;
+    button {
+      background-color: transparent;
+      color: black;
+      &:active {
+        border-color: black;
+      }
+      &:focus-within {
+        border: 2px 2px 0px 2px solid black;
+        color: red;
+      }
     }
   }
-  }
   #nav-tabContent {
-    
     .form {
       border: 1px solid black;
       border-radius: 10px;
       margin: 20px;
       padding: 20px;
       background-color: transparent;
-      .deslog{
-        background-color: black !important;
-          border: 3px solid red;
+      .deslog {
+        background-color: black;
+        border: 3px solid red;
+        &:active {
+          background-color: red;
+          border: 3px solid rgb(255, 136, 0);
+        }
       }
-      h3{
+      h3 {
         color: white;
         font-weight: 600;
       }
       form {
-        
         input {
           margin: 10px 5px;
           font-size: smaller;
         }
         .btn {
-          background-color: black !important;
+          background-color: black;
           border: 3px solid red;
           font-size: larger;
+          &:active {
+            background-color: red;
+            border: 3px solid rgb(255, 136, 0);
+          }
         }
 
         p {
@@ -59,8 +64,12 @@
         button {
           margin: 10px;
 
-          background-color: black !important;
+          background-color: black;
           border: 3px solid red;
+          &:active {
+            background-color: red;
+            border: 3px solid rgb(255, 136, 0);
+          }
         }
       }
     }

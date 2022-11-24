@@ -1,7 +1,7 @@
-.mainContacto{
+.mainContacto {
   background-image: linear-gradient(to top, #d8d8d8, #ffffff);
   min-height: 100vh;
- .imagenContactoMain {
+  .imagenContactoMain {
     width: 100%;
     max-height: 40vh;
     object-fit: cover;
@@ -10,45 +10,44 @@
   .redes {
     display: flex;
     justify-content: center;
-    img {      
+    img {
       width: 25px;
       margin: 30px;
     }
   }
-  
-.formConsulta {
-  margin: auto;
+
+  .formConsulta {
+    margin: auto;
     max-width: 500px;
     grid-area: formulario;
     padding: 20px;
     h3 {
-        text-align: center;
+      text-align: center;
     }
     .inpConsulta {
-        display: grid;
-        grid-template-columns: max-content;
-        justify-content: center;
-        gap: 15px;
-        padding: 5px;
-        #checkbox{
-          width: 100%;
-        }
-        .info{
-          width: 100%;
-          text-align: center;
-        }
-        textarea{
-          width: 100%;
-        }
+      display: grid;
+      grid-template-columns: max-content;
+      justify-content: center;
+      gap: 15px;
+      padding: 5px;
+      #checkbox {
+        width: 100%;
       }
-        input {
-          padding: 2px;
-          width: 100%;
-                    &:hover {
-            border: solid 2px black;
-            border-radius: 3px;
-          }
-          
+      .info {
+        width: 100%;
+        text-align: center;
+      }
+      textarea {
+        width: 100%;
+      }
+    }
+    input {
+      padding: 2px;
+      width: 100%;
+      &:hover {
+        border: solid 2px black;
+        border-radius: 3px;
+      }
     }
   }
 }
