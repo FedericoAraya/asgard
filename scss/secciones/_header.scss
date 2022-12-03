@@ -10,7 +10,7 @@
   background-color: white;
   width: 100%;
   height: 80px;
-  .nav-responsive {  
+  .nav-responsive {
     .nav-mobile {
       position: sticky;
       .navbar-toggler {
@@ -152,10 +152,6 @@
           img {
             width: 15px;
           }
-          .trash {
-            margin-right: 10px;
-            padding: 0;
-          }
         }
 
         .itemsCantidad {
@@ -166,12 +162,16 @@
               padding: 0;
               margin: 0;
               width: 25px;
-              font-size: x-large;
+              font-size: large;
               text-align: center;
             }
             .restarUno {
               padding-bottom: 4px;
-              }
+            }
+          }
+          button {
+            margin-left: 3px;
+            padding: 0;
           }
         }
       }
@@ -185,6 +185,61 @@
   .navbar-brand {
     img {
       width: 100px;
+    }
+  }
+}
+
+.compra {
+  font-size: large;
+  .cardsCompra {
+    max-height: 60vh;
+    overflow-y: scroll;
+    .card {
+      padding: 0;
+      margin: 0 !important;
+      width: 90%;
+      height: inherit;
+      font-size: small !important;
+      .row {
+        
+        object-fit: cover;
+        align-items: center;
+        .col-5 {
+          .rounded-start {
+            width: 100%;
+            margin: auto;
+            object-fit: cover;
+          }
+        }
+      }
+      .col-7{
+        position: absolute;
+        top: 0;
+        right: 0;
+      .card-body {
+        position: inherit;
+        top: 0;
+        padding: 3px;
+        margin-left: 10px;
+        h5 {
+          font-size: medium;
+          margin-top: 4px;
+          margin-bottom: 0;
+        }
+        .precioCard {
+          margin: 0;
+        }
+        img {
+          width: 15px;
+        }
+      }
+    }
+  }
+  }
+  .datosEnvio {
+    height: 200px;
+    h5 {
+      font-size: large;
     }
   }
 }

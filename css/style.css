@@ -109,9 +109,6 @@ body {
         margin: 0; }
       .header #carrito .cardCarrito .card .card-body img {
         width: 15px; }
-      .header #carrito .cardCarrito .card .card-body .trash {
-        margin-right: 10px;
-        padding: 0; }
     .header #carrito .cardCarrito .card .itemsCantidad {
       display: flex;
       justify-content: space-between; }
@@ -119,14 +116,57 @@ body {
         padding: 0;
         margin: 0;
         width: 25px;
-        font-size: x-large;
+        font-size: large;
         text-align: center; }
       .header #carrito .cardCarrito .card .itemsCantidad small .restarUno {
         padding-bottom: 4px; }
+      .header #carrito .cardCarrito .card .itemsCantidad button {
+        margin-left: 3px;
+        padding: 0; }
   .header #carrito .carrito img {
     width: 30px; }
   .header .navbar-brand img {
     width: 100px; }
+
+.compra {
+  font-size: large; }
+  .compra .cardsCompra {
+    max-height: 60vh;
+    overflow-y: scroll; }
+    .compra .cardsCompra .card {
+      padding: 0;
+      margin: 0 !important;
+      width: 90%;
+      height: inherit;
+      font-size: small !important; }
+      .compra .cardsCompra .card .row {
+        object-fit: cover;
+        align-items: center; }
+        .compra .cardsCompra .card .row .col-5 .rounded-start {
+          width: 100%;
+          margin: auto;
+          object-fit: cover; }
+      .compra .cardsCompra .card .col-7 {
+        position: absolute;
+        top: 0;
+        right: 0; }
+        .compra .cardsCompra .card .col-7 .card-body {
+          position: inherit;
+          top: 0;
+          padding: 3px;
+          margin-left: 10px; }
+          .compra .cardsCompra .card .col-7 .card-body h5 {
+            font-size: medium;
+            margin-top: 4px;
+            margin-bottom: 0; }
+          .compra .cardsCompra .card .col-7 .card-body .precioCard {
+            margin: 0; }
+          .compra .cardsCompra .card .col-7 .card-body img {
+            width: 15px; }
+  .compra .datosEnvio {
+    height: 200px; }
+    .compra .datosEnvio h5 {
+      font-size: large; }
 
 .mainIndex {
   background-image: linear-gradient(to top, #d8d8d8, #ffffff);
@@ -301,6 +341,11 @@ body {
         object-fit: cover;
         height: 100%;
         width: 100%; }
+      .mainTienda #productosTienda .card .card-body .card-title {
+        font-size: medium;
+        font-weight: 700; }
+      .mainTienda #productosTienda .card .card-body .card-text {
+        font-size: small; }
       .mainTienda #productosTienda .card .card-body button {
         background-color: black;
         border: 3px solid red; }
