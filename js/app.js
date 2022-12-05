@@ -1,3 +1,167 @@
+function header(){
+  const divHeader = document.getElementById("header")
+  divHeader.innerHTML=`
+  <div class="nav-responsive">
+  <nav class="navbar d-md-none nav-mobile">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+      >
+        <img
+          src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670194828/menu-hamburguesa_cocaf5.png"
+          alt="menu hamburguesa"
+        />
+      </button>
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <img src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670194947/logo-asgard_pc4cka.png" alt="Logo Asgard" />
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>              
+        </div>
+        <h5 class="saludo m-3"></h5>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../index.html"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/tienda.html">Tienda</a>
+            </li>
+                        <li class="nav-item">
+              <a class="nav-link" href="../pages/pagosYEnvios.html"
+                >Pagos y Envios</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item d-none adminVisibleM">
+              <a class="nav-link" href="../pages/admin.html">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex flex-row login"
+                href="../pages/login.html"
+                ><img  class="logoLogin" src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670195016/loginIcon_lk4ow4.png" alt="Icono Login" />
+                <p class="p-2">LOGIN</p></a
+              >
+               </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar nav-desck d-none d-md-block">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"
+        ><img src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670194947/logo-asgard_pc4cka.png" alt="Logo Asgard"
+      /></a>
+      <div class="navbar-nav">
+        <a
+          class="nav-link active"
+          aria-current="page"
+          href="../index.html"
+          >Inicio</a
+        >
+        <a class="nav-link" href="../pages/tienda.html">Tienda</a>            
+        <a class="nav-link" href="../pages/pagosYEnvios.html">Pagos y Envios</a>
+        <a class="nav-link" href="../pages/contacto.html">Contactos</a>
+        <a class="nav-link adminVisibleD d-none" href="../pages/admin.html"
+          >Admin</a
+        >
+        <a class="nav-link" href="../pages/login.html"
+          ><button class="btn btn-ligth">
+            <img
+              class="logoLogin"
+              src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670195016/loginIcon_lk4ow4.png"
+              alt="Icono Login"
+            /></button
+        ></a>
+      </div>
+    </div>
+  </nav>
+</div>
+<a class="navbar-brand d-md-none" href="../index.html"
+  ><img src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670194947/logo-asgard_pc4cka.png" alt="Logo Asgard"
+/></a>
+<div id="carrito">
+  <button
+    class="btn btn-ligth carrito"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#offcanvasScrolling"
+    aria-controls="offcanvasScrolling"
+  >
+  <img src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670078413/carrito_u1x8hu.png" alt="Carrito" />        
+  </button>
+  <div
+    class="offcanvas offcanvas-end collapse"
+    data-bs-scroll="true"
+    data-bs-backdrop="false"
+    tabindex="-1"
+    id="offcanvasScrolling"
+    aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">          
+      <h4 class="offcanvas-title" id="offcanvasScrollingLabel">
+        Carrito
+      </h4>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <h6 class="saludo m-2" ></h6>
+    <div id="checkLog"   class="d-none">
+      <p>Para comprar debes estar <a href="../pages/login.html">Registrado</a></p>
+    </div>
+    <div class="offcanvas-body">
+      <div class="cardCarrito">
+       </div>
+        <div class="total">
+      </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+  `
+}
+header()
+
+function footer (){
+  const divFooter = document.getElementById("footer")
+  divFooter.innerHTML=`
+  <div class="redes">
+  <a href=""><img src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670078413/whatsapp_wvrlyb.png" alt="Logo WhatsApp" /></a>
+  <a href=""><img src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670078334/instagram_ezxrhb.png" alt="Logo instagram" /></a>
+</div>
+<div class="copirigth">
+  <p>By.Asgard ©</p>
+</div>
+  `
+}
+footer()
+
 if (localStorage.getItem("carrito")) {
   carrito = JSON.parse(localStorage.getItem("carrito"));
 } else {
@@ -14,15 +178,8 @@ if (carrito.length > 0) {
 }
 
 function renderizarCarrito() {
-  var ajustarLink = ".";
-  if (
-    window.location.pathname === "/index.html" ||
-    window.location.pathname === "/asgard" ||
-    window.location.pathname === "/asgard/index.html" ||
-    window.location.pathname === "/asgard/"
-  ) {
-    ajustarLink = " ";
-  }
+
+  
   carrito.forEach((producto) => {
     const cardCarrito = document.createElement("div");
     cardCarrito.classList = "card mb-3";
@@ -32,9 +189,9 @@ function renderizarCarrito() {
         <div class="row g-0">
         <div class="col-5">
         <img
-        src="${ajustarLink + producto.imagen}"
+        src="${producto.imagen}"
         class="rounded-start"
-        alt="..."
+        alt="${producto.nombreProducto}"
         />
         </div>
         <div class="col-7">
@@ -46,7 +203,7 @@ function renderizarCarrito() {
         </button>${producto.cantidad}<button class="btn restarUno ">
         -</button></small>
         <button class="btn">
-        <img class="trash " src="${ajustarLink}./images/trash.png" alt="">
+        <img class="trash " src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670078413/trash_e5nspl.png" alt="trash">
         </button>
         </div>
         </div>
@@ -178,16 +335,21 @@ function renderizarCarrito() {
       
         html:
         `<div class="compra d-flex flex-column flex-md-row">        
-        <div class="cardsCompra col-12 col-md-6">
+        <div class=" col-12 col-md-6">
+        <div class="cardsCompra">
         </div>
+        <h5  class="mt-4">Total = $${sumaCarrito}</h5>
+        </div>
+        
         <div class="datosEnvio col-12 col-md-6">
         <h5> Datos de envío </h5>
+
         </div>
         </div>`,
         
-        showCloseButton: false,        
+        showCloseButton: true,        
         confirmButtonText:
-          '<i class="fa fa-thumbs-up"></i> Great!',
+          '<i class="fa fa-thumbs-up"></i> Pagar',
         confirmButtonColor:"red",
         confirmButtonAriaLabel: 'Thumbs up, great!',
               })
@@ -203,7 +365,7 @@ function renderizarCarrito() {
                     <div class="row g-0">
                     <div class="col-5">
                     <img
-                    src="${ajustarLink + producto.imagen}"
+                    src="${producto.imagen}"
                     class="rounded-start"
                     alt="..."
                     />
@@ -217,7 +379,7 @@ function renderizarCarrito() {
                     </div>
                     </div>
                     </div>
-                    </div>       
+                    </div>  
                     `;
             
                 cardsCompra.append(cardCompra);

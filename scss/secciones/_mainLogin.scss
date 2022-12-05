@@ -1,7 +1,7 @@
 .mainLogin {
   align-items: center;
   min-height: 100vh;
-  background-image: url("../images/sendero en montaña.jpg");
+  background-image: url("https://res.cloudinary.com/dyksknsxc/image/upload/v1670201961/sendero_en_monta%C3%B1a_baexwi.jpg");
 
   background-position: top;
 
@@ -17,7 +17,7 @@
         border-color: black;
       }
       &:focus-within {
-        border: 2px 2px 0px 2px solid black;
+        border: 2px 2px 0px 2px solid rgb(0, 0, 0);
         color: red;
       }
     }
