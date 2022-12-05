@@ -78,7 +78,7 @@ function header(){
         <a
           class="nav-link active"
           aria-current="page"
-          href="asgard/index.html"
+          href="/asgard/index.html"
           >Inicio</a
         >
         <a class="nav-link" href="/asgard/pages/tienda.html">Tienda</a>            
