@@ -38,23 +38,23 @@ function header(){
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="../index.html"
+                href="../asgard//index.html"
                 >Inicio</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/tienda.html">Tienda</a>
+              <a class="nav-link" href="../asgard/pages/tienda.html">Tienda</a>
             </li>
                         <li class="nav-item">
-              <a class="nav-link" href="../pages/pagosYEnvios.html"
+              <a class="nav-link" href="../asgard/pages/pagosYEnvios.html"
                 >Pagos y Envios</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+              <a class="nav-link" href="../asgard/pages/contacto.html">Contacto</a>
             </li>
             <li class="nav-item d-none adminVisibleM">
-              <a class="nav-link" href="../pages/admin.html">Admin</a>
+              <a class="nav-link" href="../asgard/pages/admin.html">Admin</a>
             </li>
             <li class="nav-item">
               <a
@@ -71,19 +71,19 @@ function header(){
   </nav>
   <nav class="navbar nav-desck d-none d-md-block">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../index.html"
+      <a class="navbar-brand" href="../asgard/index.html"
         ><img src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670194947/logo-asgard_pc4cka.png" alt="Logo Asgard"
       /></a>
       <div class="navbar-nav">
         <a
           class="nav-link active"
           aria-current="page"
-          href="../index.html"
+          href="../asgard/index.html"
           >Inicio</a
         >
-        <a class="nav-link" href="../pages/tienda.html">Tienda</a>            
-        <a class="nav-link" href="../pages/pagosYEnvios.html">Pagos y Envios</a>
-        <a class="nav-link" href="../pages/contacto.html">Contactos</a>
+        <a class="nav-link" href="../asgard/pages/tienda.html">Tienda</a>            
+        <a class="nav-link" href="../asgard/pages/pagosYEnvios.html">Pagos y Envios</a>
+        <a class="nav-link" href="../asgard/pages/contacto.html">Contactos</a>
         <a class="nav-link adminVisibleD d-none" href="../pages/admin.html"
           >Admin</a
         >
@@ -99,7 +99,7 @@ function header(){
     </div>
   </nav>
 </div>
-<a class="navbar-brand d-md-none" href="../index.html"
+<a class="navbar-brand d-md-none" href="../asgard/index.html"
   ><img src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670194947/logo-asgard_pc4cka.png" alt="Logo Asgard"
 /></a>
 <div id="carrito">
