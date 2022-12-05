@@ -38,7 +38,7 @@ function header(){
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="../asgard//index.html"
+                href="../asgard/index.html"
                 >Inicio</a
               >
             </li>
@@ -84,7 +84,7 @@ function header(){
         <a class="nav-link" href="../asgard/pages/tienda.html">Tienda</a>            
         <a class="nav-link" href="../asgard/pages/pagosYEnvios.html">Pagos y Envios</a>
         <a class="nav-link" href="../asgard/pages/contacto.html">Contactos</a>
-        <a class="nav-link adminVisibleD d-none" href="../pages/admin.html"
+        <a class="nav-link adminVisibleD d-none" href="../asgard/pages/admin.html"
           >Admin</a
         >
         <a class="nav-link" href="../pages/login.html"
