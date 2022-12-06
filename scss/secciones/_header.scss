@@ -201,7 +201,7 @@
       height: inherit;
       font-size: small !important;
       .row {
-        
+        min-height: 80px;
         object-fit: cover;
         align-items: center;
         .col-5 {
@@ -241,5 +241,59 @@
     h5 {
       font-size: large;
     }
+    form{
+      input{
+        margin: 5px;
+      }
+    }
+  }
+}
+
+.checkout{
+  
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: rgb(69, 69, 248);
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+#formTarjeta {
+  
+ font-size: medium;
+  
+    fieldset{
+      
+      div{
+      display: flex;
+      flex-direction: row;
+        justify-content: center;
+        margin-top: 5px;
+      input{
+        max-width: 50px;
+        margin: 3px;
+      }
+    }
+    }
+    #card-holder{
+      margin-top: 10px;
+      max-width: 80%;
+    }
+    .fieldset-expiration{
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: center;
+      margin-top: 5px;
+      align-items: center;
+      div{
+        margin: 10px;
+      }
+    }
+  }
+  #card-ccv{
+    max-width: 40px;
   }
 }

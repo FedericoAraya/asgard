@@ -139,6 +139,7 @@ body {
       height: inherit;
       font-size: small !important; }
       .compra .cardsCompra .card .row {
+        min-height: 80px;
         object-fit: cover;
         align-items: center; }
         .compra .cardsCompra .card .row .col-5 .rounded-start {
@@ -166,6 +167,43 @@ body {
     height: 200px; }
     .compra .datosEnvio h5 {
       font-size: large; }
+    .compra .datosEnvio form input {
+      margin: 5px; }
+
+.checkout {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #4545f8;
+  color: white;
+  padding: 10px;
+  border-radius: 25px; }
+  .checkout #formTarjeta {
+    font-size: medium; }
+    .checkout #formTarjeta fieldset div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 5px; }
+      .checkout #formTarjeta fieldset div input {
+        max-width: 50px;
+        margin: 3px; }
+    .checkout #formTarjeta #card-holder {
+      margin-top: 10px;
+      max-width: 80%; }
+    .checkout #formTarjeta .fieldset-expiration {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: center;
+      margin-top: 5px;
+      align-items: center; }
+      .checkout #formTarjeta .fieldset-expiration div {
+        margin: 10px; }
+  .checkout #card-ccv {
+    max-width: 40px; }
 
 .mainIndex {
   background-image: linear-gradient(to top, #d8d8d8, #ffffff);
