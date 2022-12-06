@@ -1,4 +1,4 @@
-fetch("../json/data.json")
+fetch("/json/data.json")
 .then((respuesta) => respuesta.json())
 .then((data)=> {
   productos = data;
