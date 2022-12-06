@@ -80,4 +80,12 @@ function agregarProdusctoCarrito(e) {
   }).showToast();
 }
 
-renderizarTienda();
+fetch("../json/data.json")
+.then((respuesta) => respuesta.json())
+.then((data)=> {
+  productos = data;
+  renderizarTienda();
+})
+
+
+

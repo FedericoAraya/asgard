@@ -1,6 +1,14 @@
-function header(){
-  const divHeader = document.getElementById("header")
-  divHeader.innerHTML=`
+fetch("../json/data.json")
+.then((respuesta) => respuesta.json())
+.then((data)=> {
+  productos = data;
+  
+})
+
+
+function header() {
+  const divHeader = document.getElementById("header");
+  divHeader.innerHTML = `
   <div class="nav-responsive">
   <nav class="navbar d-md-none nav-mobile">
     <div class="container-fluid">
@@ -110,7 +118,10 @@ function header(){
     data-bs-target="#offcanvasScrolling"
     aria-controls="offcanvasScrolling"
   >
-  <img src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670078413/carrito_u1x8hu.png" alt="Carrito" />        
+  <img src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670078413/carrito_u1x8hu.png" alt="Carrito" />
+  <div class="volumenCarrito d-none">  
+ 
+  </div>     
   </button>
   <div
     class="offcanvas offcanvas-end collapse"
@@ -144,13 +155,13 @@ function header(){
   </div>
 </div> 
 
-  `
+  `;
 }
-header()
+header();
 
-function footer (){
-  const divFooter = document.getElementById("footer")
-  divFooter.innerHTML=`
+function footer() {
+  const divFooter = document.getElementById("footer");
+  divFooter.innerHTML = `
   <div class="redes">
   <a href=""><img src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670078413/whatsapp_wvrlyb.png" alt="Logo WhatsApp" /></a>
   <a href=""><img src="https://res.cloudinary.com/dyksknsxc/image/upload/v1670078334/instagram_ezxrhb.png" alt="Logo instagram" /></a>
@@ -158,12 +169,13 @@ function footer (){
 <div class="copirigth">
   <p>By.Asgard ©</p>
 </div>
-  `
+  `;
 }
-footer()
+footer();
 
 if (localStorage.getItem("carrito")) {
   carrito = JSON.parse(localStorage.getItem("carrito"));
+  
 } else {
   carrito = [];
 }
@@ -178,8 +190,6 @@ if (carrito.length > 0) {
 }
 
 function renderizarCarrito() {
-
-  
   carrito.forEach((producto) => {
     const cardCarrito = document.createElement("div");
     cardCarrito.classList = "card mb-3";
@@ -218,13 +228,16 @@ function renderizarCarrito() {
   carrito.forEach((producto) => {
     unidadesCarrito = unidadesCarrito + producto.cantidad;
   });
-
-  const lengthCarrito = document.createElement("div");
+  
+  let lengthCarrito = document.querySelector(".volumenCarrito");
   lengthCarrito.classList = "volumenCarrito";
-  lengthCarrito.innerHTML = `        
+  if (unidadesCarrito > 0) {
+    lengthCarrito.innerHTML = `        
                     <p class="lengthCarrito">${unidadesCarrito}</p>      
               `;
-  volumenCarrito.append(lengthCarrito);
+  } else {
+    lengthCarrito.classList = "d-none volumenCarrito";
+  }
 
   let sumaCarrito = 0;
 
@@ -247,66 +260,6 @@ function renderizarCarrito() {
     boton.addEventListener("click", eliminarProducto);
   });
 
-  function sumarProducto(e) {
-    const productoSeleccionado = e.target
-      .closest(".card")
-      .getAttribute("idCarrito");
-    const indexProd = carrito.findIndex(
-      (posicion) => posicion.id == productoSeleccionado
-    );
-    carrito[indexProd].cantidad = carrito[indexProd].cantidad + 1;
-
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    cardsCarrito.innerHTML = "";
-    renderizarCarrito();
-  }
-
-  function restarProducto(e) {
-    const productoSeleccionado = e.target
-      .closest(".card")
-      .getAttribute("idCarrito");
-    const indexProd = carrito.findIndex(
-      (posicion) => posicion.id == productoSeleccionado
-    );
-    if (carrito[indexProd].cantidad === 1) {
-      eliminarProducto(e);
-    } else {
-      carrito[indexProd].cantidad = carrito[indexProd].cantidad - 1;
-    }
-
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    cardsCarrito.innerHTML = "";
-    renderizarCarrito();
-  }
-
-  function eliminarProducto(e) {
-    const productoSeleccionado = e.target
-      .closest(".card")
-      .getAttribute("idCarrito");
-    const indexProd = carrito.findIndex(
-      (posicion) => posicion.id == productoSeleccionado
-    );
-
-    carrito.splice(indexProd, 1);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    cardsCarrito.innerHTML = "";
-    renderizarCarrito();
-
-    Toastify({
-      text: `${productos[indexProd].nombreProducto} fue borrado de su carrito`,
-      duration: 3000,
-      newWindow: true,
-      close: false,
-      gravity: "bottom",
-      position: "right",
-      stopOnFocus: true,
-      style: {
-        background: "red",
-      },
-      onClick: function () {},
-    }).showToast();
-  }
-
   if (usuarioLogueado != "deslog") {
     const total = document.querySelector(".total");
     const comprar = document.createElement("div");
@@ -317,24 +270,24 @@ function renderizarCarrito() {
         `;
 
     total.innerHTML = "";
-    total.append(comprar);
-    total.classList = "total";
-
+    if (carrito.length > 0) {
+      total.append(comprar);
+      total.classList = "total";
+    }
+    if (carrito.length > 0){
     const botonComprar = document.querySelector(".botonComprar");
     botonComprar.addEventListener("click", realizarCompra);
-
+  }
     function realizarCompra() {
       Swal.fire({
-        title: '<p>Confirmación de compra</p>',
+        title: "<p>Confirmación de compra</p>",
         grow: "fullscreen",
         backdrop: true,
-        allowOutsideClick:false,
-        width : "100% !important" ,
+        allowOutsideClick: false,
+        width: "100% !important",
         padding: "0px !important",
-        margin: "0px !important",
-      
-        html:
-        `<div class="compra d-flex flex-column flex-md-row">        
+
+        html: `<div class="compra d-flex flex-column flex-md-row">        
         <div class=" col-12 col-md-6">
         <div class="cardsCompra">
         </div>
@@ -342,26 +295,115 @@ function renderizarCarrito() {
         </div>
         
         <div class="datosEnvio col-12 col-md-6">
-        <h5> Datos de envío </h5>
-
+        <h5> Datos de envío: </h5>
+        <form action="submit">
+        <input class="nombre" type="text" placeholder="Nombre">
+        <input class="apellido" type="text" placeholder="Apellido">
+        <input class="provincia" type="text" placeholder="Provincia">
+        <input class="ciudad" type="text" placeholder="Ciudad">
+        <input type="text" class="direccion" placeholder="Dirección">
+        <input type="text" class="barrio" placeholder="Barrio">
+        <input type="tel" class="telefono" placeholder="Teléfono">
+    </form>
         </div>
         </div>`,
-        
-        showCloseButton: true,        
-        confirmButtonText:
-          '<i class="fa fa-thumbs-up"></i> Pagar',
-        confirmButtonColor:"red",
-        confirmButtonAriaLabel: 'Thumbs up, great!',
-              })
-              
-              const cardsCompra = document.querySelector(".cardsCompra");
-              console.log(cardsCompra);
-              carrito.forEach((producto) => {
-                const cardCompra = document.createElement("div");
-                cardCompra.classList = "card mb-3";
-                cardCompra.setAttribute("idCarrito", producto.id);
-                cardCompra.style = "max-height: 100px;";
-                cardCompra.innerHTML = `        
+
+        showCloseButton: true,
+        confirmButtonText: '<i class="fa fa-thumbs-up"></i> Pagar',
+        customClass: {
+          confirmButton: "irAlPago",
+        },
+        confirmButtonColor: "red",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "<p>Confirmación de compra</p>",
+            grow: "fullscreen",
+            backdrop: true,
+            allowOutsideClick: false,
+            width: "100% !important",
+            padding: "0px !important",
+
+            html: `
+            <h5  class="mt-4">Total = $${sumaCarrito}</h5>
+            
+            
+            <div class="datosPago col-12">
+            <h5> Datos de pago: </h5>
+            <div class="checkout">  
+  <form id="formTarjeta" autocomplete="off" novalidate>
+    <fieldset>
+      <label for="card-number">Número de Tarjeta</label>
+      <div>
+      <input type="num" id="card-number" class="input-cart-number" maxlength="4" />
+      <input type="num" id="card-number-1" class="input-cart-number" maxlength="4" />
+      <input type="num" id="card-number-2" class="input-cart-number" maxlength="4" />
+      <input type="num" id="card-number-3" class="input-cart-number" maxlength="4" />
+      </div>
+    </fieldset>
+    <fieldset>
+      <label for="card-holder">Nombre</label>
+      <input type="text" id="card-holder" />
+    </fieldset>
+    <fieldset class="fieldset-expiration">
+      <label for="card-expiration-month">Validez</label>
+      <div class="select">
+        <select id="card-expiration-month">
+          <option></option>
+          <option>01</option>
+          <option>02</option>
+          <option>03</option>
+          <option>04</option>
+          <option>05</option>
+          <option>06</option>
+          <option>07</option>
+          <option>08</option>
+          <option>09</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </div>
+      <div class="select">
+        <select id="card-expiration-year">
+          <option></option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+          <option>2025</option>
+          <option>2026</option>
+          <option>2027</option>
+          <option>2028</option>
+          <option>2029</option>
+          <option>2030</option>
+          <option>2031</option>
+        </select>
+      </div>
+    </fieldset>
+    <fieldset class="fieldset-ccv">
+      <label for="card-ccv">CCV</label>
+      <input type="text" id="card-ccv" maxlength="3" />
+    </fieldset>
+    </form>
+</div>
+            </div>
+            </div>`,
+
+            showCloseButton: true,
+            confirmButtonText: '<i class="fa fa-thumbs-up"></i> Confirmar pago',
+            confirmButtonColor: "red",
+            confirmButtonAriaLabel: "Thumbs up, great!",
+          });
+        }
+      });
+
+      const cardsCompra = document.querySelector(".cardsCompra");
+      carrito.forEach((producto) => {
+        const cardCompra = document.createElement("div");
+        cardCompra.classList = "card mb-3";
+        cardCompra.setAttribute("idCarrito", producto.id);
+        cardCompra.style = "max-height: 100px;";
+        cardCompra.innerHTML = `        
                     <div class="row g-0">
                     <div class="col-5">
                     <img
@@ -381,9 +423,9 @@ function renderizarCarrito() {
                     </div>
                     </div>  
                     `;
-            
-                cardsCompra.append(cardCompra);
-              }); 
+
+        cardsCompra.append(cardCompra);
+      });
 
       // carrito = [];
       // localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -393,8 +435,6 @@ function renderizarCarrito() {
       // renderizarCarrito();
       // total.classList = "d-none";
     }
-    
-    
   }
 }
 
@@ -416,4 +456,65 @@ if (usuarioLogueado != "deslog") {
 } else {
   const checkLog = document.querySelector("#checkLog");
   checkLog.classList = "";
+}
+
+function sumarProducto(e) {
+  const productoSeleccionado = e.target
+    .closest(".card")
+    .getAttribute("idCarrito");
+  const indexProd = carrito.findIndex(
+    (posicion) => posicion.id == productoSeleccionado
+  );
+  carrito[indexProd].cantidad = carrito[indexProd].cantidad + 1;
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  cardsCarrito.innerHTML = "";
+  renderizarCarrito();
+}
+
+function restarProducto(e) {
+  const productoSeleccionado = e.target
+    .closest(".card")
+    .getAttribute("idCarrito");
+  const indexProd = carrito.findIndex(
+    (posicion) => posicion.id == productoSeleccionado
+  );
+  if (carrito[indexProd].cantidad === 1) {
+    eliminarProducto(e);
+  } else {
+    carrito[indexProd].cantidad = carrito[indexProd].cantidad - 1;
+  }
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  cardsCarrito.innerHTML = "";
+  renderizarCarrito();
+}
+
+function eliminarProducto(e) {
+  const productoSeleccionado = e.target
+    .closest(".card")
+    .getAttribute("idCarrito");
+  const indexProd = carrito.findIndex(
+    (posicion) => posicion.id == productoSeleccionado
+  );
+
+  carrito.splice(indexProd, 1);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  cardsCarrito.innerHTML = "";
+
+  renderizarCarrito();
+
+  Toastify({
+    text: `${productos[indexProd].nombreProducto} fue borrado de su carrito`,
+    duration: 3000,
+    newWindow: true,
+    close: false,
+    gravity: "bottom",
+    position: "right",
+    stopOnFocus: true,
+    style: {
+      background: "red",
+    },
+    onClick: function () {},
+  }).showToast();
 }
