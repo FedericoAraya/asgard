@@ -1,0 +1,100 @@
+[
+    {
+        "nombreProducto": "Bajo Asiento 4L",
+        "categoria": "bajo asiento",
+        "precio": 5400,
+        "imagenProducto": "https://res.cloudinary.com/dyksknsxc/image/upload/v1670078414/bajo_asiento_4l_a996ni.jpg",
+        "id": 1,
+        "colores": [
+            "negro",
+            "verde",
+            "naranja",
+            "coyote"
+        ]
+    },
+    {
+        "nombreProducto": "Bajo Asiento 14L",
+        "categoria": "bajo asiento",
+        "precio": 8500,
+        "imagenProducto": "https://res.cloudinary.com/dyksknsxc/image/upload/v1670078414/bajo_asiento_14l_ypggif.jpg",
+        "id": 2,
+        "colores": [
+            "negro",
+            "negro c/bolsa gris"
+        ]
+    },
+    {
+        "nombreProducto": "Bolso Stem",
+        "categoria": "sobre cuadro",
+        "precio": 3600,
+        "imagenProducto": "https://res.cloudinary.com/dyksknsxc/image/upload/v1670078413/bolso_stem_a1m3xm.jpg",
+        "id": 3,
+        "colores": [
+            "negro",
+            "verde",
+            "naranja",
+            "coyote"
+        ]
+    },
+    {
+        "nombreProducto": "Medio Frame Bag",
+        "categoria": "frame bag",
+        "precio": 7000,
+        "imagenProducto": "https://res.cloudinary.com/dyksknsxc/image/upload/v1670200584/medio_fram_atldab.jpg",
+        "id": 4,
+        "colores": [
+            "Segun disponibilidad"
+        ]
+    },
+    {
+        "nombreProducto": "Medio Frame Doble Suspensión",
+        "categoria": "frame bag",
+        "precio": 6200,
+        "imagenProducto": "https://res.cloudinary.com/dyksknsxc/image/upload/v1670078414/Medio_Fram_dobleS_dbrqgj.jpg",
+        "id": 5,
+        "colores": [
+            "Segun disponibilidad"
+        ]
+    },
+    {
+        "nombreProducto": "Frame Completo",
+        "categoria": "frame bag",
+        "precio": 7000,
+        "imagenProducto": "https://res.cloudinary.com/dyksknsxc/image/upload/v1670078414/frame_un_bolsillo_v0byfm.jpg",
+        "id": 6,
+        "colores": [
+            "Segun disponibilidad"
+        ]
+    },
+    {
+        "nombreProducto": "Frame Doble Bolsillo",
+        "categoria": "frame bag",
+        "precio": 8200,
+        "imagenProducto": "https://res.cloudinary.com/dyksknsxc/image/upload/v1670078414/frame_bag_doble_bolsillo_o5dxxq.jpg",
+        "id": 7,
+        "colores": [
+            "Segun disponibilidad"
+        ]
+    },
+    {
+        "nombreProducto": "Bolso Botella ",
+        "categoria": "manubrio",
+        "precio": 3200,
+        "imagenProducto": "https://res.cloudinary.com/dyksknsxc/image/upload/v1670078413/porta_botella_manubrio_t9squr.jpg",
+        "id": 8,
+        "colores": [
+            "negro"
+        ]
+    },
+    {
+        "nombreProducto": "Alforja Manubrio",
+        "categoria": "manubrio",
+        "precio": 6800,
+        "imagenProducto": "https://res.cloudinary.com/dyksknsxc/image/upload/v1670078574/alforja_de_manubrio_gajdqk.jpg",
+        "id": 9,
+        "colores": [
+            "negro",
+            "negro c/bolsa gris"
+        ]
+    }
+]
