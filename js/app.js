@@ -334,10 +334,10 @@ function renderizarCarrito() {
     <fieldset>
       <label for="card-number">Número de Tarjeta</label>
       <div>
-      <input type="num" id="card-number" class="input-cart-number" maxlength="4" />
-      <input type="num" id="card-number-1" class="input-cart-number" maxlength="4" />
-      <input type="num" id="card-number-2" class="input-cart-number" maxlength="4" />
-      <input type="num" id="card-number-3" class="input-cart-number" maxlength="4" />
+      <input type="number" id="card-number" class="input-cart-number" maxlength="4" />
+      <input type="number" id="card-number-1" class="input-cart-number" maxlength="4" />
+      <input type="number" id="card-number-2" class="input-cart-number" maxlength="4" />
+      <input type="number" id="card-number-3" class="input-cart-number" maxlength="4" />
       </div>
     </fieldset>
     <fieldset>
@@ -381,7 +381,7 @@ function renderizarCarrito() {
     </fieldset>
     <fieldset class="fieldset-ccv">
       <label for="card-ccv">CCV</label>
-      <input type="text" id="card-ccv" maxlength="3" />
+      <input type="number" id="card-ccv" maxlength="3" />
     </fieldset>
     </form>
 </div>
