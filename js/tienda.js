@@ -80,7 +80,7 @@ function agregarProdusctoCarrito(e) {
   }).showToast();
 }
 
-fetch("/json/data.json")
+fetch("/asgard/json/data.json")
 .then((respuesta) => respuesta.json())
 .then((data)=> {
   productos = data;
