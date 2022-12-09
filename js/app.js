@@ -464,25 +464,26 @@ function renderizarCarrito() {
                 showConfirmButton: false,
                 icon: "success",
               });
+              carrito = [];
+              localStorage.setItem("carrito", JSON.stringify(carrito));
+              cardsCarrito.innerHTML = "";
+              total.innerHTML = "";
+              renderizarCarrito();
+              total.classList = "d-none";
+              setTimeout(mensajeConfirmacion,4000);
+              function mensajeConfirmacion(){
+              Swal.fire({
+                title: "Compra realizada con éxito",
+                html: `<h3>Sus datos de pago y envío son los siguentes:</h3>
+                <h5> Direccion: ${direccion},${ciudad},${provincia} </h5>
+                <h5> Pago, tarjeta número: **** **** **** ${num4} </h5>
+                <h5> A nombre de: ${apellido},${nombre}</h5>`
+                ,        
+                confirmButtonColor: "red",
+              });
             }
-            carrito = [];
-      localStorage.setItem("carrito", JSON.stringify(carrito));
-      cardsCarrito.innerHTML = "";
-      total.innerHTML = "";
-      renderizarCarrito();
-      total.classList = "d-none";
-      setTimeout(mensajeConfirmacion,4000);
-      function mensajeConfirmacion(){
-      Swal.fire({
-        title: "Compra realizada con éxito",
-        html: `<h3>Sus datos de pago y envío son los siguentes:</h3>
-        <h5> Direccion: ${direccion},${ciudad},${provincia} </h5>
-        <h5> Pago, tarjeta número: **** **** **** ${num4} </h5>
-        <h5> A nombre de: ${apellido},${nombre}</h5>`
-        ,        
-        confirmButtonColor: "red",
-      });
-    }
+            }
+      
           });
         }
       });
