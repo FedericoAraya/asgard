@@ -173,7 +173,8 @@ body {
 .tarjeta {
   margin: 0 auto;
   font-size: medium;
-  max-width: 300px;
+  min-width: 300px;
+  max-width: 350px;
   background-color: #080836;
   color: white;
   border-radius: 15px;

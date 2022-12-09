@@ -253,7 +253,8 @@
 .tarjeta {
   margin: 0 auto;
   font-size: medium;
-  max-width: 300px;
+  min-width: 300px;
+  max-width: 350px;
   background-color: rgb(8, 8, 54);
   color: white;
   border-radius: 15px;
@@ -267,9 +268,7 @@
  
   #meses{
     width: 50px;
-  }
- 
- 
+  } 
   
   #anos{
     width: 50px;
