@@ -1,9 +1,8 @@
 fetch("/asgard/json/data.json")
-.then((respuesta) => respuesta.json())
-.then((data)=> {
-  productos = data;
-  })
-
+  .then((respuesta) => respuesta.json())
+  .then((data) => {
+    productos = data;
+  });
 
 function header() {
   const divHeader = document.getElementById("header");
@@ -174,7 +173,6 @@ footer();
 
 if (localStorage.getItem("carrito")) {
   carrito = JSON.parse(localStorage.getItem("carrito"));
-  
 } else {
   carrito = [];
 }
@@ -227,7 +225,7 @@ function renderizarCarrito() {
   carrito.forEach((producto) => {
     unidadesCarrito = unidadesCarrito + producto.cantidad;
   });
-  
+
   let lengthCarrito = document.querySelector(".volumenCarrito");
   lengthCarrito.classList = "volumenCarrito";
   if (unidadesCarrito > 0) {
@@ -273,10 +271,26 @@ function renderizarCarrito() {
       total.append(comprar);
       total.classList = "total";
     }
-    if (carrito.length > 0){
-    const botonComprar = document.querySelector(".botonComprar");
-    botonComprar.addEventListener("click", realizarCompra);
-  }
+    if (carrito.length > 0) {
+      const botonComprar = document.querySelector(".botonComprar");
+      botonComprar.addEventListener("click", realizarCompra);
+    }
+
+    let nombre;
+    let apellido;
+    let provincia;
+    let ciudad;
+    let direccion;
+    let telefono;
+    let num1;
+    let num2;
+    let num3;
+    let num4;
+    let nombreYApellido;
+    let meses;
+    let anos;
+    let cvv;
+
     function realizarCompra() {
       Swal.fire({
         title: "<p>Confirmación de compra</p>",
@@ -295,20 +309,45 @@ function renderizarCarrito() {
         
         <div class="datosEnvio col-12 col-md-6">
         <h5> Datos de envío: </h5>
-        <form action="submit">
-        <input class="nombre" type="text" placeholder="Nombre">
-        <input class="apellido" type="text" placeholder="Apellido">
-        <input class="provincia" type="text" placeholder="Provincia">
-        <input class="ciudad" type="text" placeholder="Ciudad">
-        <input type="text" class="direccion" placeholder="Dirección">
-        <input type="text" class="barrio" placeholder="Barrio">
-        <input type="tel" class="telefono" placeholder="Teléfono">
-    </form>
+        <input type="text" id="nombre" class="m-2 p-1" placeholder="Nombre">
+        <input type="text" id="apellido" class="m-2 p-1" placeholder="Apellido">
+        <input type="text" id="provincia" class="m-2 p-1" placeholder="Provincia">
+        <input type="text" id="ciudad" class="m-2 p-1" placeholder="Ciudad">
+        <input type="text" id="direccion" class="m-2 p-1" placeholder="Dirección">
+        <input type="tel" id="telefono" class="m-2 p-1" placeholder="Teléfono">
         </div>
         </div>`,
+        focusConfirm: false,
+        preConfirm: () => {
+          nombre = Swal.getPopup().querySelector("#nombre").value;
+          apellido = Swal.getPopup().querySelector("#apellido").value;
+          provincia = Swal.getPopup().querySelector("#provincia").value;
+          ciudad = Swal.getPopup().querySelector("#ciudad").value;
+          direccion = Swal.getPopup().querySelector("#direccion").value;
+          telefono = Swal.getPopup().querySelector("#telefono").value;
+          if (
+            !nombre ||
+            !apellido ||
+            !provincia ||
+            !ciudad ||
+            !direccion ||
+            !telefono
+          ) {
+            Swal.showValidationMessage(`Debe completar todos los campos`);
+          }
+          return {
+            nombre: nombre,
+            apellido: apellido,
+            provincia: provincia,
+            ciudad: ciudad,
+            direccion: direccion,
+            telefono: telefono,
+          };
+        },
 
         showCloseButton: true,
-        confirmButtonText: '<i class="fa fa-thumbs-up"></i> Pagar',
+        confirmButtonText:
+          '<i class="datosEnvio fa fa-thumbs-up" type="submit" /> Ir a Pagar',
         customClass: {
           confirmButton: "irAlPago",
         },
@@ -324,74 +363,126 @@ function renderizarCarrito() {
             padding: "0px !important",
 
             html: `
-            <h5  class="mt-4">Total = $${sumaCarrito}</h5>
-            
-            
+            <h5  class="mt-4">Total = $${sumaCarrito}</h5>            
             <div class="datosPago col-12">
             <h5> Datos de pago: </h5>
-            <div class="checkout">  
-  <form id="formTarjeta" autocomplete="off" novalidate>
-    <fieldset>
-      <label for="card-number">Número de Tarjeta</label>
-      <div>
-      <input type="number" id="card-number" class="input-cart-number" maxlength="4" />
-      <input type="number" id="card-number-1" class="input-cart-number" maxlength="4" />
-      <input type="number" id="card-number-2" class="input-cart-number" maxlength="4" />
-      <input type="number" id="card-number-3" class="input-cart-number" maxlength="4" />
-      </div>
-    </fieldset>
-    <fieldset>
-      <label for="card-holder">Nombre</label>
-      <input type="text" id="card-holder" />
-    </fieldset>
-    <fieldset class="fieldset-expiration">
-      <label for="card-expiration-month">Validez</label>
-      <div class="select">
-        <select id="card-expiration-month">
-          <option></option>
-          <option>01</option>
-          <option>02</option>
-          <option>03</option>
-          <option>04</option>
-          <option>05</option>
-          <option>06</option>
-          <option>07</option>
-          <option>08</option>
-          <option>09</option>
-          <option>10</option>
-          <option>11</option>
-          <option>12</option>
+          <div class="tarjeta d-flex flex-column">
+           <p> Número de Tarjeta</p> 
+           <div class="digitos d-flex flex-row">
+        <input type="tel" id="num1" class="m-2 p-1" maxlength="4">
+        <input type="tel" id="num2" class="m-2 p-1" maxlength="4">
+        <input type="tel" id="num3" class="m-2 p-1" maxlength="4">
+        <input type="tel" id="num4" class="m-2 p-1" maxlength="4">
+        </div>
+        <input  type="text" id="nombreYApellido" class="m-2 p-1" placeholder="Nombre y Apellido">
+        <div class="d-flex flex-row">
+        <div class="d-flex flex-row">
+        <label  class="mes m-2 p-1" for="mes">Mes</label>
+        <select class="m-2 p-1" name="meses" id="meses">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
         </select>
-      </div>
-      <div class="select">
-        <select id="card-expiration-year">
-          <option></option>
-          <option>2022</option>
-          <option>2023</option>
-          <option>2024</option>
-          <option>2025</option>
-          <option>2026</option>
-          <option>2027</option>
-          <option>2028</option>
-          <option>2029</option>
-          <option>2030</option>
-          <option>2031</option>
+        </div>
+        <div class="d-flex flex-row">
+        <label class="ano m-2 p-1" for="ano">Año</label>
+        <select class="m-2 p-1" name="anos" id="anos">
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        <option value="32">32</option>
+        <option value="33">33</option>
         </select>
-      </div>
-    </fieldset>
-    <fieldset class="fieldset-ccv">
-      <label for="card-ccv">CCV</label>
-      <input type="number" id="card-ccv" maxlength="3" />
-    </fieldset>
-    </form>
-</div>
-            </div>
-            </div>`,
+        </div>
+        </div>
+        <input type="tel" id="cvv" class="m-2 p-1" placeholder="CVV" maxlength="3">
+        </div>
+        </div>`,
+            focusConfirm: false,
+            preConfirm: () => {
+              num1 = Swal.getPopup().querySelector("#num1").value;
+              num2 = Swal.getPopup().querySelector("#num2").value;
+              num3 = Swal.getPopup().querySelector("#num3").value;
+              num4 = Swal.getPopup().querySelector("#num4").value;
+              nombreYApellido =
+                Swal.getPopup().querySelector("#nombreYApellido").value;
+              meses = Swal.getPopup().querySelector("#meses").value;
+              anos = Swal.getPopup().querySelector("#anos").value;
+              cvv = Swal.getPopup().querySelector("#cvv").value;
+
+              if (
+                !num1 ||
+                !num2 ||
+                !num3 ||
+                !num4 ||
+                !nombreYApellido ||
+                !meses ||
+                !anos ||
+                !cvv
+              ) {
+                Swal.showValidationMessage(`Debe completar todos los campos`);
+              }
+              return {
+                num1: num1,
+                num2: num2,
+                num3: num3,
+                num4: num4,
+                nombreYApellido: nombreYApellido,
+                meses: meses,
+                anos: anos,
+                cvv: cvv,
+              };
+            },
 
             showCloseButton: true,
             confirmButtonText: '<i class="fa fa-thumbs-up"></i> Confirmar pago',
             confirmButtonColor: "red",
             confirmButtonAriaLabel: "Thumbs up, great!",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              let timerInterval;
+              Swal.fire({
+                title: "Verificando Pago",
+                html: "Puede demorar unos segundos",
+                timer: 4000,
+                showConfirmButton: false,
+                icon: "success",
+              });
+            }
+            carrito = [];
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      cardsCarrito.innerHTML = "";
+      total.innerHTML = "";
+      renderizarCarrito();
+      total.classList = "d-none";
+      setTimeout(mensajeConfirmacion,4000);
+      function mensajeConfirmacion(){
+      Swal.fire({
+        title: "Compra realizada con éxito",
+        html: `<h3>Sus datos de pago y envío son los siguentes:</h3>
+        <h5> Direccion: ${direccion},${ciudad},${provincia} </h5>
+        <h5> Pago, tarjeta número: **** **** **** ${num4} </h5>
+        <h5> A nombre de: ${apellido},${nombre}</h5>`
+        ,        
+        confirmButtonColor: "red",
+      });
+    }
           });
         }
       });
@@ -426,13 +517,8 @@ function renderizarCarrito() {
         cardsCompra.append(cardCompra);
       });
 
-      // carrito = [];
-      // localStorage.setItem("carrito", JSON.stringify(carrito));
-      // cardsCarrito.innerHTML = "";
-      // total.innerHTML = "";
+      
 
-      // renderizarCarrito();
-      // total.classList = "d-none";
     }
   }
 }
@@ -517,4 +603,3 @@ function eliminarProducto(e) {
     onClick: function () {},
   }).showToast();
 }
-

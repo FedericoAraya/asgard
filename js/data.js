@@ -1,15 +1,5 @@
- class Producto {
-     constructor(nombreProducto, categoria, precio, imagenProducto, id, colores) {
-       this.nombreProducto = nombreProducto;
-       this.categoria = categoria;
-       this.precio = precio;
-       this.imagenProducto = imagenProducto;
-       this.id = id;
-       this.colores = colores;
-     }
- }
-
-
+let totalProductos = []
+let productosAgregados = []
 let productos = []
 
 

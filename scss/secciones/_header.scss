@@ -249,51 +249,30 @@
   }
 }
 
-.checkout{
-  
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+.tarjeta {
   margin: 0 auto;
-  background-color: rgb(69, 69, 248);
+  font-size: medium;
+  max-width: 300px;
+  background-color: rgb(8, 8, 54);
   color: white;
-  padding: 10px;
-  border-radius: 25px;
-#formTarjeta {
-  
- font-size: medium;
-  
-    fieldset{
-      
-      div{
-      display: flex;
-      flex-direction: row;
-        justify-content: center;
-        margin-top: 5px;
-      input{
-        max-width: 50px;
-        margin: 3px;
-      }
-    }
-    }
-    #card-holder{
-      margin-top: 10px;
-      max-width: 80%;
-    }
-    .fieldset-expiration{
-      display: flex;
-      flex-direction: row;
-      text-align: center;
-      justify-content: center;
-      margin-top: 5px;
-      align-items: center;
-      div{
-        margin: 10px;
-      }
-    }
-  }
-  #card-ccv{
-    max-width: 40px;
-  }
+  border-radius: 15px;
+  padding: 15px;
+ .digitos{
+  input{
+  max-width: 50px;
 }
+ }
+ 
+ 
+  #meses{
+    width: 50px;
+  }
+ 
+ 
+  
+  #anos{
+    width: 50px;
+  }
+ 
+  }

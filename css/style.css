@@ -170,40 +170,20 @@ body {
     .compra .datosEnvio form input {
       margin: 5px; }
 
-.checkout {
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.tarjeta {
   margin: 0 auto;
-  background-color: #4545f8;
+  font-size: medium;
+  max-width: 300px;
+  background-color: #080836;
   color: white;
-  padding: 10px;
-  border-radius: 25px; }
-  .checkout #formTarjeta {
-    font-size: medium; }
-    .checkout #formTarjeta fieldset div {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin-top: 5px; }
-      .checkout #formTarjeta fieldset div input {
-        max-width: 50px;
-        margin: 3px; }
-    .checkout #formTarjeta #card-holder {
-      margin-top: 10px;
-      max-width: 80%; }
-    .checkout #formTarjeta .fieldset-expiration {
-      display: flex;
-      flex-direction: row;
-      text-align: center;
-      justify-content: center;
-      margin-top: 5px;
-      align-items: center; }
-      .checkout #formTarjeta .fieldset-expiration div {
-        margin: 10px; }
-  .checkout #card-ccv {
-    max-width: 40px; }
+  border-radius: 15px;
+  padding: 15px; }
+  .tarjeta .digitos input {
+    max-width: 50px; }
+  .tarjeta #meses {
+    width: 50px; }
+  .tarjeta #anos {
+    width: 50px; }
 
 .mainIndex {
   background-image: linear-gradient(to top, #d8d8d8, #ffffff);
